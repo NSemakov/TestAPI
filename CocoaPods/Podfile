@@ -15,8 +15,9 @@ abstract_target 'TestAPI.iOS' do
 
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
+  pod 'Alamofire',  '~> 4.8'
+  pod 'SwiftyJSON', '~> 4.0'
   
-
   # Targets
   target 'TestAPI'
 end
