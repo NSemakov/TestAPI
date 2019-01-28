@@ -1,0 +1,31 @@
+platform :ios, '8.0'
+use_frameworks!
+
+workspace '../TestAPI/TestAPI.xcworkspace'
+
+def inject_shared_dependencies_1
+  pod_with 'SwiftCommons', '~> 1.3.0'
+end
+
+def inject_shared_dependencies_2
+  pod_with 'NetworkingApi', '~> 1.3.0'
+end
+
+abstract_target 'TestAPI.iOS' do
+  project '../TestAPI/Sources/UI.Application/TestAPI.UI.Application.xcodeproj'
+
+  # Dependencies
+  inject_shared_dependencies_1
+  inject_shared_dependencies_2
+
+  pod_with 'ModernDesign', '~> 1.3.0'
+
+  pod_with 'PureLayout', '~> 3.1.2'
+  pod_with 'R.swift', '~> 5.0.0'
+  pod_with 'RxDataSources', '~> 3.1.0'
+  pod_with 'SDWebImage', '~> 4.4.2'
+  
+
+  # Targets
+  target 'TestApi'
+end
