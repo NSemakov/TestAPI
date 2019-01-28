@@ -10,7 +10,6 @@
 		24A15D9121FF868900357249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A15D8421FF868900357249 /* Assets.xcassets */; };
 		24A15D9321FF868900357249 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A15D8B21FF868900357249 /* LaunchScreen.storyboard */; };
 		24A15D9521FF868900357249 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A15D8E21FF868900357249 /* AppDelegate.swift */; };
-		24A15DA421FF973200357249 /* TestAPI.UI.Application.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 24A15DA321FF973000357249 /* TestAPI.UI.Application.xcconfig */; };
 		24A15DB021FFAE6900357249 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A15DAD21FFAE6700357249 /* UIDevice.swift */; };
 		24A15DB121FFAE6900357249 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A15DAE21FFAE6700357249 /* UIImage.swift */; };
 		24A15DB221FFAE6900357249 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A15DAF21FFAE6700357249 /* UIViewController.swift */; };
@@ -381,6 +380,22 @@
 		24A1611521FFB63700357249 /* RedirectInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A160C021FFB63600357249 /* RedirectInterceptor.swift */; };
 		24A1611621FFB63700357249 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A160C121FFB63600357249 /* NetworkConfig.swift */; };
 		24A1611821FFB8EE00357249 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1611721FFB8EE00357249 /* Dispatch.swift */; };
+		24A1616121FFBBC800357249 /* RecordCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1614B21FFBBC800357249 /* RecordCellViewModel.swift */; };
+		24A1616221FFBBC800357249 /* RidesHistoryController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A1614D21FFBBC800357249 /* RidesHistoryController.storyboard */; };
+		24A1616621FFBBC800357249 /* RecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A1615121FFBBC800357249 /* RecordCell.xib */; };
+		24A1616721FFBBC800357249 /* RidesHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1615321FFBBC800357249 /* RidesHistoryController.swift */; };
+		24A1616821FFBBC800357249 /* RidePointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1615521FFBBC800357249 /* RidePointsView.swift */; };
+		24A1616921FFBBC800357249 /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1615621FFBBC800357249 /* RecordCell.swift */; };
+		24A1616D21FFBBC800357249 /* PaymentMethodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1615C21FFBBC800357249 /* PaymentMethodViewModel.swift */; };
+		24A1616E21FFBBC800357249 /* RideHistoryDetailController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A1615E21FFBBC800357249 /* RideHistoryDetailController.storyboard */; };
+		24A1616F21FFBBC800357249 /* RideHistoryDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1616021FFBBC800357249 /* RideHistoryDetailController.swift */; };
+		24A1617321FFBCD700357249 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1617221FFBCD700357249 /* BaseViewController.swift */; };
+		24A1617621FFC23F00357249 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1617521FFC23F00357249 /* RecordModel.swift */; };
+		24A1617921FFC3A700357249 /* TimeZoneFreeTimestampTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1617821FFC3A700357249 /* TimeZoneFreeTimestampTransform.swift */; };
+		24A1617B21FFC3CB00357249 /* JsonKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1617A21FFC3CB00357249 /* JsonKeys.swift */; };
+		24A1618021FFC5D400357249 /* GetRecordsTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1617F21FFC5D400357249 /* GetRecordsTask.swift */; };
+		24A1618621FFC6EA00357249 /* ValidatableModelArrayConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1618321FFC6EA00357249 /* ValidatableModelArrayConverter.swift */; };
+		24A1618721FFC6EA00357249 /* ValidatableModelConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1618421FFC6EA00357249 /* ValidatableModelConverter.swift */; };
 		7523B3F8AA743DBBF5EEAD87 /* Pods_TestAPI_iOS_TestAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D05CB7F133C90AB04113519 /* Pods_TestAPI_iOS_TestAPI.framework */; };
 /* End PBXBuildFile section */
 
@@ -791,6 +806,22 @@
 		24A160C021FFB63600357249 /* RedirectInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedirectInterceptor.swift; sourceTree = "<group>"; };
 		24A160C121FFB63600357249 /* NetworkConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		24A1611721FFB8EE00357249 /* Dispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Dispatch.swift; path = Dispatch/Dispatch.swift; sourceTree = "<group>"; };
+		24A1614B21FFBBC800357249 /* RecordCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCellViewModel.swift; sourceTree = "<group>"; };
+		24A1614D21FFBBC800357249 /* RidesHistoryController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RidesHistoryController.storyboard; sourceTree = "<group>"; };
+		24A1615121FFBBC800357249 /* RecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordCell.xib; sourceTree = "<group>"; };
+		24A1615321FFBBC800357249 /* RidesHistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RidesHistoryController.swift; sourceTree = "<group>"; };
+		24A1615521FFBBC800357249 /* RidePointsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RidePointsView.swift; sourceTree = "<group>"; };
+		24A1615621FFBBC800357249 /* RecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
+		24A1615C21FFBBC800357249 /* PaymentMethodViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentMethodViewModel.swift; sourceTree = "<group>"; };
+		24A1615E21FFBBC800357249 /* RideHistoryDetailController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RideHistoryDetailController.storyboard; sourceTree = "<group>"; };
+		24A1616021FFBBC800357249 /* RideHistoryDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideHistoryDetailController.swift; sourceTree = "<group>"; };
+		24A1617221FFBCD700357249 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		24A1617521FFC23F00357249 /* RecordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
+		24A1617821FFC3A700357249 /* TimeZoneFreeTimestampTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeZoneFreeTimestampTransform.swift; sourceTree = "<group>"; };
+		24A1617A21FFC3CB00357249 /* JsonKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonKeys.swift; sourceTree = "<group>"; };
+		24A1617F21FFC5D400357249 /* GetRecordsTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRecordsTask.swift; sourceTree = "<group>"; };
+		24A1618321FFC6EA00357249 /* ValidatableModelArrayConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatableModelArrayConverter.swift; sourceTree = "<group>"; };
+		24A1618421FFC6EA00357249 /* ValidatableModelConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatableModelConverter.swift; sourceTree = "<group>"; };
 		32F842803DAE1B68C6DD7377 /* Pods-TestAPI.iOS-TestAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAPI.iOS-TestAPI.release.xcconfig"; path = "../../CocoaPods/Pods/Target Support Files/Pods-TestAPI.iOS-TestAPI/Pods-TestAPI.iOS-TestAPI.release.xcconfig"; sourceTree = "<group>"; };
 		4D05CB7F133C90AB04113519 /* Pods_TestAPI_iOS_TestAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestAPI_iOS_TestAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1119FD9AD57A3A6A5C45334 /* Pods-TestAPI.iOS-TestAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAPI.iOS-TestAPI.debug.xcconfig"; path = "../../CocoaPods/Pods/Target Support Files/Pods-TestAPI.iOS-TestAPI/Pods-TestAPI.iOS-TestAPI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -869,6 +900,7 @@
 		24A15D8721FF868900357249 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				24A1617021FFBCD700357249 /* Library */,
 				24A15D8821FF868900357249 /* Screen */,
 			);
 			path = UI;
@@ -877,6 +909,8 @@
 		24A15D8821FF868900357249 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				24A1615A21FFBBC800357249 /* RideHistoryDetail */,
+				24A1614921FFBBC800357249 /* RecordsList */,
 				24A15D8921FF868900357249 /* LaunchScreen */,
 			);
 			path = Screen;
@@ -913,6 +947,9 @@
 		24A15D8F21FF868900357249 /* Core.Entities */ = {
 			isa = PBXGroup;
 			children = (
+				24A1617A21FFC3CB00357249 /* JsonKeys.swift */,
+				24A1617421FFC23F00357249 /* Models */,
+				24A1617721FFC3A700357249 /* Transforms */,
 			);
 			path = Core.Entities;
 			sourceTree = "<group>";
@@ -920,6 +957,7 @@
 		24A15D9021FF868900357249 /* Core.Net */ = {
 			isa = PBXGroup;
 			children = (
+				24A1617C21FFC5D400357249 /* Rest */,
 			);
 			path = Core.Net;
 			sourceTree = "<group>";
@@ -2214,6 +2252,151 @@
 			path = Interceptor;
 			sourceTree = "<group>";
 		};
+		24A1614921FFBBC800357249 /* RecordsList */ = {
+			isa = PBXGroup;
+			children = (
+				24A1614A21FFBBC800357249 /* ViewModels */,
+				24A1614C21FFBBC800357249 /* Resources */,
+				24A1615221FFBBC800357249 /* Controllers */,
+				24A1615421FFBBC800357249 /* Views */,
+			);
+			path = RecordsList;
+			sourceTree = "<group>";
+		};
+		24A1614A21FFBBC800357249 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				24A1614B21FFBBC800357249 /* RecordCellViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		24A1614C21FFBBC800357249 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				24A1614D21FFBBC800357249 /* RidesHistoryController.storyboard */,
+				24A1615121FFBBC800357249 /* RecordCell.xib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		24A1615221FFBBC800357249 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				24A1615321FFBBC800357249 /* RidesHistoryController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		24A1615421FFBBC800357249 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				24A1615521FFBBC800357249 /* RidePointsView.swift */,
+				24A1615621FFBBC800357249 /* RecordCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		24A1615A21FFBBC800357249 /* RideHistoryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				24A1615B21FFBBC800357249 /* ViewModels */,
+				24A1615D21FFBBC800357249 /* Resources */,
+				24A1615F21FFBBC800357249 /* Controllers */,
+			);
+			path = RideHistoryDetail;
+			sourceTree = "<group>";
+		};
+		24A1615B21FFBBC800357249 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				24A1615C21FFBBC800357249 /* PaymentMethodViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		24A1615D21FFBBC800357249 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				24A1615E21FFBBC800357249 /* RideHistoryDetailController.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		24A1615F21FFBBC800357249 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				24A1616021FFBBC800357249 /* RideHistoryDetailController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		24A1617021FFBCD700357249 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				24A1617121FFBCD700357249 /* Controllers */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		24A1617121FFBCD700357249 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				24A1617221FFBCD700357249 /* BaseViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		24A1617421FFC23F00357249 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				24A1617521FFC23F00357249 /* RecordModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		24A1617721FFC3A700357249 /* Transforms */ = {
+			isa = PBXGroup;
+			children = (
+				24A1617821FFC3A700357249 /* TimeZoneFreeTimestampTransform.swift */,
+			);
+			path = Transforms;
+			sourceTree = "<group>";
+		};
+		24A1617C21FFC5D400357249 /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				24A1617D21FFC5D400357249 /* v1 */,
+			);
+			path = Rest;
+			sourceTree = "<group>";
+		};
+		24A1617D21FFC5D400357249 /* v1 */ = {
+			isa = PBXGroup;
+			children = (
+				24A1618121FFC6EA00357249 /* Converter */,
+				24A1617E21FFC5D400357249 /* Request */,
+			);
+			path = v1;
+			sourceTree = "<group>";
+		};
+		24A1617E21FFC5D400357249 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				24A1617F21FFC5D400357249 /* GetRecordsTask.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		24A1618121FFC6EA00357249 /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				24A1618321FFC6EA00357249 /* ValidatableModelArrayConverter.swift */,
+				24A1618421FFC6EA00357249 /* ValidatableModelConverter.swift */,
+			);
+			path = Converter;
+			sourceTree = "<group>";
+		};
 		988F406E225569AFA24DA72E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2291,8 +2474,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24A1616221FFBBC800357249 /* RidesHistoryController.storyboard in Resources */,
+				24A1616621FFBBC800357249 /* RecordCell.xib in Resources */,
+				24A1616E21FFBBC800357249 /* RideHistoryDetailController.storyboard in Resources */,
 				24A15D9321FF868900357249 /* LaunchScreen.storyboard in Resources */,
-				24A15DA421FF973200357249 /* TestAPI.UI.Application.xcconfig in Resources */,
 				24A15D9121FF868900357249 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2359,6 +2544,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24A1618621FFC6EA00357249 /* ValidatableModelArrayConverter.swift in Sources */,
 				24A15FAD21FFAF4E00357249 /* ChainedLogger.swift in Sources */,
 				24A1601C21FFB1FD00357249 /* Data+Extension.swift in Sources */,
 				24A160FF21FFB63700357249 /* RequestEntity.swift in Sources */,
@@ -2382,12 +2568,14 @@
 				24A1601121FFB1FD00357249 /* CMAC.swift in Sources */,
 				24A160FA21FFB63700357249 /* HttpBody.swift in Sources */,
 				24A15F9621FFAF4E00357249 /* UrlValidator.swift in Sources */,
+				24A1616821FFBBC800357249 /* RidePointsView.swift in Sources */,
 				24A15F0421FFAF4E00357249 /* String.Empty.swift in Sources */,
 				24A15F5321FFAF4E00357249 /* Check.NilOrValid.swift in Sources */,
 				24A15F6621FFAF4E00357249 /* LFEncoding.m in Sources */,
 				24A15FA821FFAF4E00357249 /* StdoutLogger.Information.swift in Sources */,
 				24A15F5221FFAF4E00357249 /* CheckError.swift in Sources */,
 				24A15F4B21FFAF4E00357249 /* Check.NotBlank.swift in Sources */,
+				24A1618021FFC5D400357249 /* GetRecordsTask.swift in Sources */,
 				24A1603821FFB1FD00357249 /* Checksum.swift in Sources */,
 				24A15F7921FFAF4E00357249 /* ObjectMapperException.swift in Sources */,
 				24A15F5121FFAF4E00357249 /* Check.LessThan.swift in Sources */,
@@ -2473,6 +2661,7 @@
 				24A15F4221FFAF4E00357249 /* Check.AllNotNil.swift in Sources */,
 				24A1603921FFB1FD00357249 /* SHA2.swift in Sources */,
 				24A15F4621FFAF4E00357249 /* Check.Throws.swift in Sources */,
+				24A1616F21FFBBC800357249 /* RideHistoryDetailController.swift in Sources */,
 				24A15F8421FFAF4E00357249 /* DateTransform.swift in Sources */,
 				24A15EF621FFAF4E00357249 /* Validatable.Valid.swift in Sources */,
 				24A15F8021FFAF4E00357249 /* ToJSON.swift in Sources */,
@@ -2509,6 +2698,7 @@
 				24A15F0321FFAF4E00357249 /* String.Trim.swift in Sources */,
 				24A1602021FFB1FD00357249 /* Rabbit+Foundation.swift in Sources */,
 				24A160F421FFB63700357249 /* UnexpectedMediaTypeError.swift in Sources */,
+				24A1616721FFBBC800357249 /* RidesHistoryController.swift in Sources */,
 				24A160FC21FFB63700357249 /* RestApiClient.swift in Sources */,
 				24A15F2D21FFAF4E00357249 /* Guard.NotValid.swift in Sources */,
 				24A1601A21FFB1FD00357249 /* Utils+Foundation.swift in Sources */,
@@ -2523,6 +2713,7 @@
 				24A15F0821FFAF4E00357249 /* Roxie.TypeCast.swift in Sources */,
 				24A160F221FFB63700357249 /* NestedError.swift in Sources */,
 				24A160F521FFB63700357249 /* HttpResponseError.swift in Sources */,
+				24A1617B21FFC3CB00357249 /* JsonKeys.swift in Sources */,
 				24A15FB021FFAF4E00357249 /* ChainedLogger.Warning.swift in Sources */,
 				24A15F6221FFAF4E00357249 /* Validator.swift in Sources */,
 				24A1610321FFB63700357249 /* JsonBody.swift in Sources */,
@@ -2572,7 +2763,9 @@
 				24A15FA421FFAF4E00357249 /* LogcatLogger.Debug.swift in Sources */,
 				24A15F9D21FFAF4E00357249 /* Logger.Warning.swift in Sources */,
 				24A15F9121FFAF4E00357249 /* SerializableObject.swift in Sources */,
+				24A1618721FFC6EA00357249 /* ValidatableModelConverter.swift in Sources */,
 				24A1603021FFB1FD00357249 /* BlockCipher.swift in Sources */,
+				24A1616121FFBBC800357249 /* RecordCellViewModel.swift in Sources */,
 				24A160DA21FFB63700357249 /* HttpBearerAuthentication.swift in Sources */,
 				24A160F321FFB63700357249 /* ConnectionError.swift in Sources */,
 				24A160D421FFB63700357249 /* HTTPCookie.swift in Sources */,
@@ -2588,6 +2781,7 @@
 				24A15F2C21FFAF4E00357249 /* Guard.NilOrValid.swift in Sources */,
 				24A1600821FFB1FD00357249 /* HKDF.swift in Sources */,
 				24A15F5F21FFAF4E00357249 /* Validatable.swift in Sources */,
+				24A1617321FFBCD700357249 /* BaseViewController.swift in Sources */,
 				24A1603C21FFB1FD00357249 /* PKCS5.swift in Sources */,
 				24A15F0721FFAF4E00357249 /* String.Strip.swift in Sources */,
 				24A15F6021FFAF4E00357249 /* PostValidatable.swift in Sources */,
@@ -2660,6 +2854,7 @@
 				24A1600321FFB1FD00357249 /* AES.swift in Sources */,
 				24A15F5721FFAF4E00357249 /* Check.Blank.swift in Sources */,
 				24A1601721FFB1FD00357249 /* NoPadding.swift in Sources */,
+				24A1617921FFC3A700357249 /* TimeZoneFreeTimestampTransform.swift in Sources */,
 				24A1601F21FFB1FD00357249 /* AES+Foundation.swift in Sources */,
 				24A1601821FFB1FD00357249 /* String+FoundationExtension.swift in Sources */,
 				24A15F9F21FFAF4E00357249 /* Logger.Error.swift in Sources */,
@@ -2698,10 +2893,12 @@
 				24A15F7A21FFAF4E00357249 /* Mapper.swift in Sources */,
 				24A15F8E21FFAF4E00357249 /* CommonKeys.swift in Sources */,
 				24A15EF221FFAF4E00357249 /* Roxie.CachesDirectory.swift in Sources */,
+				24A1616D21FFBBC800357249 /* PaymentMethodViewModel.swift in Sources */,
 				24A1610521FFB63700357249 /* BasicRequestEntity.swift in Sources */,
 				24A1603721FFB1FD00357249 /* Generics.swift in Sources */,
 				24A15EFE21FFAF4E00357249 /* Swift.swift in Sources */,
 				24A15FA321FFAF4E00357249 /* LogcatLogger.Warning.swift in Sources */,
+				24A1616921FFBBC800357249 /* RecordCell.swift in Sources */,
 				24A15EEC21FFAF4E00357249 /* FileManager.RemoveItem.swift in Sources */,
 				24A15F3621FFAF4E00357249 /* Guard.AllNilOrValid.swift in Sources */,
 				24A1601B21FFB1FD00357249 /* HMAC+Foundation.swift in Sources */,
@@ -2715,6 +2912,7 @@
 				24A160CE21FFB63700357249 /* CharsetProvider.swift in Sources */,
 				24A160C521FFB63700357249 /* VoidConverter.swift in Sources */,
 				24A15FA921FFAF4E00357249 /* StdoutLogger.Warning.swift in Sources */,
+				24A1617621FFC23F00357249 /* RecordModel.swift in Sources */,
 				24A15EE621FFAF4E00357249 /* Date.Intervals.swift in Sources */,
 				24A1602221FFB1FD00357249 /* MD5.swift in Sources */,
 				24A160E121FFB63700357249 /* QueryParams.swift in Sources */,
