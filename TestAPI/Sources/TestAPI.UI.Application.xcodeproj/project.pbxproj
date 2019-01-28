@@ -103,7 +103,11 @@
 		24A15D8921FF868900357249 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
+				24A15D9C21FF898E00357249 /* Controllers */,
+				24A15D9E21FF898E00357249 /* Models */,
 				24A15D8A21FF868900357249 /* Resources */,
+				24A15D9621FF898600357249 /* ViewModels */,
+				24A15D9821FF898600357249 /* Views */,
 			);
 			path = LaunchScreen;
 			sourceTree = "<group>";
@@ -136,6 +140,34 @@
 			children = (
 			);
 			path = Core.Net;
+			sourceTree = "<group>";
+		};
+		24A15D9621FF898600357249 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		24A15D9821FF898600357249 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		24A15D9C21FF898E00357249 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		24A15D9E21FF898E00357249 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
