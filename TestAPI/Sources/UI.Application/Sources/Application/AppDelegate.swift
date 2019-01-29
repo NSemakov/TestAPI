@@ -18,44 +18,7 @@ class AppDelegate: UIResponder
 {
 // MARK: - Private Methods
     
-    @objc private func loadSession()
-    {
-        let body = FormBodyBuilder()
-            .add(JsonKeys.A, value: "new_session")
-            .build()
-        
-        let entity = BasicRequestEntityBuilder<FormBody>()
-            .url(EndpointManager.defaultManager.baseURL)
-            .headers(DefaultHttpHeaders.headers(AuthManager.defaultManager.token))
-            .body(body)
-            .build()
-        
-        let callback = BasicRestApiCallback<FormBody, SessionModel>()
-        callback.then(
-            onSuccess: { call, entity, callback in
-                callback(call, entity)
-                
-                // Handle response
-                if let session = entity.body
-                {
-                    AuthManager.defaultManager.session = session.session
-                }
-        },
-            onFailure: { call, error, callback in
-                callback(call, error)
-                
-                print(error)
-                let a = 2
-        })
-        
-        let task = GetSessionTaskBuilder()
-            .tag("TAG:AppDelegate")
-            //.httpClientConfig(ApplicationHttpClientConfig.SharedConfig)
-            .requestEntity(entity)
-            .build()
-        
-        TaskQueue.enqueue(task, callback: callback, callbackOnUiThread: true)
-    }
+    // ...
     
 // MARK: - Properties
 
@@ -81,7 +44,7 @@ extension AppDelegate: UIApplicationDelegate
             .logger(logger: StdoutLogger())
         #endif
         
-        loadSession()
+
         
         // Done
         return true

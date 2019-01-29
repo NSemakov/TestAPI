@@ -95,13 +95,13 @@ class RecordsListController: BaseViewController
     {
         self.dataSource.configureCell = { dataSource, tableView, indexPath, element in
             let cell = tableView.dequeueReusableCellOfClass(RecordCell.self, forIndexPath: indexPath)
-            cell.updateView(RecordCellViewModel())
+            cell.updateView(element)
 
             return cell
         }
 
         self.dataSource.canEditRowAtIndexPath = { dataSource, indexPath in
-            return true
+            return false
         }
 
         self.dataSource.canMoveRowAtIndexPath = { dataSource, indexPath in
@@ -187,6 +187,7 @@ class RecordsListController: BaseViewController
                
         let body = FormBodyBuilder()
             .add(JsonKeys.Session, value: session)
+            .add(JsonKeys.A, value: "get_entries")
             .build()
         
         let entity = BasicRequestEntityBuilder<FormBody>()

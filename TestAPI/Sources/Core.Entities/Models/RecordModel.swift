@@ -16,9 +16,9 @@ public final class RecordModel: ValidatableModel
 
     public private(set) var body: String?
 
-    public private(set) var da: Date?
+    public private(set) var da: Double?
 
-    public private(set) var dm: Date?
+    public private(set) var dm: Double?
 
 // MARK: - Methods
 
@@ -28,8 +28,8 @@ public final class RecordModel: ValidatableModel
         // (De)serialize to/from json
         self.id   <~  map[JsonKeys.Id]
         self.body <~  map[JsonKeys.Body]
-        self.da   <~ (map[JsonKeys.Da], TimeZoneFreeTimestampTransform.shared)
-        self.dm   <~ (map[JsonKeys.Dm], TimeZoneFreeTimestampTransform.shared)
+        self.da   <~  map[JsonKeys.Da]
+        self.dm   <~  map[JsonKeys.Dm]
     }
 
     public override func validate() throws {

@@ -30,9 +30,36 @@ class RecordCell: UITableViewCell
     
 // MARK: - Methods
 
-    func updateView(_ viewModel: RecordCellViewModel)
+    func updateView(_ viewModel: RecordModel)
     {
+        self.creationDateLabel.text = stringFromTimestamp(viewModel.da)
         
+        if viewModel.da != viewModel.dm {
+            self.changingDateLabel.text = stringFromTimestamp(viewModel.dm)
+            self.changingDateContainerView.isHidden = false
+        }
+        else {
+            self.changingDateContainerView.isHidden = true
+        }
+    }
+
+// MARK: - Private Methods
+
+    func stringFromTimestamp(_ timestamp: Double?) -> String?
+    {
+        var result: String?
+        
+        if let timestamp = timestamp {
+            let date = Date(timeIntervalSince1970: timestamp)
+            let dateFormatter = DateFormatter()
+            dateFormatter.timeStyle = DateFormatter.Style.medium //Set time style
+            dateFormatter.dateStyle = DateFormatter.Style.medium //Set date style
+            dateFormatter.timeZone = TimeZone.current
+            
+            result = dateFormatter.string(from: date)
+        }
+        
+        return result
     }
 
 // MARK: - Variables
