@@ -24,7 +24,7 @@ open class ValidatableModelArrayConverter<T: ValidatableModel>: AbstractValidata
 
     open override func supportedMediaTypes() -> [MediaType] {
         return [
-            MediaType.ApplicationJson
+            MediaType.All
         ]
     }
 }

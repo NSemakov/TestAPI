@@ -18,5 +18,8 @@ public struct JsonKeys
     public static let Body = "data.body"
     
     public static let Session = "session"
+    public static let SessionData = "data.session"
+    
+    public static let A = "a"
 }
 // ----------------------------------------------------------------------------

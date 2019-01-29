@@ -381,9 +381,9 @@
 		24A1611621FFB63700357249 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A160C121FFB63600357249 /* NetworkConfig.swift */; };
 		24A1611821FFB8EE00357249 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1611721FFB8EE00357249 /* Dispatch.swift */; };
 		24A1616121FFBBC800357249 /* RecordCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1614B21FFBBC800357249 /* RecordCellViewModel.swift */; };
-		24A1616221FFBBC800357249 /* RidesHistoryController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A1614D21FFBBC800357249 /* RidesHistoryController.storyboard */; };
+		24A1616221FFBBC800357249 /* RecordsHistoryController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A1614D21FFBBC800357249 /* RecordsHistoryController.storyboard */; };
 		24A1616621FFBBC800357249 /* RecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A1615121FFBBC800357249 /* RecordCell.xib */; };
-		24A1616721FFBBC800357249 /* RidesHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1615321FFBBC800357249 /* RidesHistoryController.swift */; };
+		24A1616721FFBBC800357249 /* RecordsHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1615321FFBBC800357249 /* RecordsHistoryController.swift */; };
 		24A1616921FFBBC800357249 /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1615621FFBBC800357249 /* RecordCell.swift */; };
 		24A1617321FFBCD700357249 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1617221FFBCD700357249 /* BaseViewController.swift */; };
 		24A1617621FFC23F00357249 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1617521FFC23F00357249 /* RecordModel.swift */; };
@@ -410,6 +410,8 @@
 		24A161B721FFD2D600357249 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A161B221FFD2D600357249 /* AlertManager.swift */; };
 		24A161B821FFD2D600357249 /* ProgressHUDActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A161B321FFD2D600357249 /* ProgressHUDActionHandler.swift */; };
 		24A161BA21FFD55800357249 /* DispatchHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A161B921FFD55800357249 /* DispatchHelpers.swift */; };
+		24A161BC21FFD82200357249 /* GetSessionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A161BB21FFD82200357249 /* GetSessionTask.swift */; };
+		24A161BE21FFD84C00357249 /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A161BD21FFD84B00357249 /* SessionModel.swift */; };
 		7523B3F8AA743DBBF5EEAD87 /* Pods_TestAPI_iOS_TestAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D05CB7F133C90AB04113519 /* Pods_TestAPI_iOS_TestAPI.framework */; };
 /* End PBXBuildFile section */
 
@@ -821,9 +823,9 @@
 		24A160C121FFB63600357249 /* NetworkConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		24A1611721FFB8EE00357249 /* Dispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Dispatch.swift; path = Dispatch/Dispatch.swift; sourceTree = "<group>"; };
 		24A1614B21FFBBC800357249 /* RecordCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCellViewModel.swift; sourceTree = "<group>"; };
-		24A1614D21FFBBC800357249 /* RidesHistoryController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RidesHistoryController.storyboard; sourceTree = "<group>"; };
+		24A1614D21FFBBC800357249 /* RecordsHistoryController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RecordsHistoryController.storyboard; sourceTree = "<group>"; };
 		24A1615121FFBBC800357249 /* RecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordCell.xib; sourceTree = "<group>"; };
-		24A1615321FFBBC800357249 /* RidesHistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RidesHistoryController.swift; sourceTree = "<group>"; };
+		24A1615321FFBBC800357249 /* RecordsHistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsHistoryController.swift; sourceTree = "<group>"; };
 		24A1615621FFBBC800357249 /* RecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
 		24A1617221FFBCD700357249 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		24A1617521FFC23F00357249 /* RecordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
@@ -850,6 +852,8 @@
 		24A161B221FFD2D600357249 /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		24A161B321FFD2D600357249 /* ProgressHUDActionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUDActionHandler.swift; sourceTree = "<group>"; };
 		24A161B921FFD55800357249 /* DispatchHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchHelpers.swift; sourceTree = "<group>"; };
+		24A161BB21FFD82200357249 /* GetSessionTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSessionTask.swift; sourceTree = "<group>"; };
+		24A161BD21FFD84B00357249 /* SessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
 		32F842803DAE1B68C6DD7377 /* Pods-TestAPI.iOS-TestAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAPI.iOS-TestAPI.release.xcconfig"; path = "../../CocoaPods/Pods/Target Support Files/Pods-TestAPI.iOS-TestAPI/Pods-TestAPI.iOS-TestAPI.release.xcconfig"; sourceTree = "<group>"; };
 		4D05CB7F133C90AB04113519 /* Pods_TestAPI_iOS_TestAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestAPI_iOS_TestAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1119FD9AD57A3A6A5C45334 /* Pods-TestAPI.iOS-TestAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAPI.iOS-TestAPI.debug.xcconfig"; path = "../../CocoaPods/Pods/Target Support Files/Pods-TestAPI.iOS-TestAPI/Pods-TestAPI.iOS-TestAPI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -2305,7 +2309,7 @@
 		24A1614C21FFBBC800357249 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				24A1614D21FFBBC800357249 /* RidesHistoryController.storyboard */,
+				24A1614D21FFBBC800357249 /* RecordsHistoryController.storyboard */,
 				24A1615121FFBBC800357249 /* RecordCell.xib */,
 			);
 			path = Resources;
@@ -2314,7 +2318,7 @@
 		24A1615221FFBBC800357249 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				24A1615321FFBBC800357249 /* RidesHistoryController.swift */,
+				24A1615321FFBBC800357249 /* RecordsHistoryController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -2346,6 +2350,7 @@
 		24A1617421FFC23F00357249 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				24A161BD21FFD84B00357249 /* SessionModel.swift */,
 				24A1617521FFC23F00357249 /* RecordModel.swift */,
 			);
 			path = Models;
@@ -2380,6 +2385,7 @@
 		24A1617E21FFC5D400357249 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				24A161BB21FFD82200357249 /* GetSessionTask.swift */,
 				24A1617F21FFC5D400357249 /* GetRecordsTask.swift */,
 			);
 			path = Request;
@@ -2541,7 +2547,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24A1616221FFBBC800357249 /* RidesHistoryController.storyboard in Resources */,
+				24A1616221FFBBC800357249 /* RecordsHistoryController.storyboard in Resources */,
 				24A1616621FFBBC800357249 /* RecordCell.xib in Resources */,
 				24A15D9321FF868900357249 /* LaunchScreen.storyboard in Resources */,
 				24A15D9121FF868900357249 /* Assets.xcassets in Resources */,
@@ -2772,7 +2778,7 @@
 				24A1619221FFCC5F00357249 /* AuthManager.swift in Sources */,
 				24A1602021FFB1FD00357249 /* Rabbit+Foundation.swift in Sources */,
 				24A160F421FFB63700357249 /* UnexpectedMediaTypeError.swift in Sources */,
-				24A1616721FFBBC800357249 /* RidesHistoryController.swift in Sources */,
+				24A1616721FFBBC800357249 /* RecordsHistoryController.swift in Sources */,
 				24A160FC21FFB63700357249 /* RestApiClient.swift in Sources */,
 				24A15F2D21FFAF4E00357249 /* Guard.NotValid.swift in Sources */,
 				24A1601A21FFB1FD00357249 /* Utils+Foundation.swift in Sources */,
@@ -2846,6 +2852,7 @@
 				24A160DA21FFB63700357249 /* HttpBearerAuthentication.swift in Sources */,
 				24A160F321FFB63700357249 /* ConnectionError.swift in Sources */,
 				24A160D421FFB63700357249 /* HTTPCookie.swift in Sources */,
+				24A161BE21FFD84C00357249 /* SessionModel.swift in Sources */,
 				24A1602421FFB1FD00357249 /* CompactMap.swift in Sources */,
 				24A15F1C21FFAF4E00357249 /* Guard.NotBlank.swift in Sources */,
 				24A1600A21FFB1FD00357249 /* AEADChaCha20Poly1305.swift in Sources */,
@@ -2924,6 +2931,7 @@
 				24A1611221FFB63700357249 /* InterceptorChain.swift in Sources */,
 				24A15F3221FFAF4E00357249 /* Guard.AllNotNil.swift in Sources */,
 				24A15F4F21FFAF4E00357249 /* Check.AllNotValid.swift in Sources */,
+				24A161BC21FFD82200357249 /* GetSessionTask.swift in Sources */,
 				24A1610921FFB63700357249 /* Callback.swift in Sources */,
 				24A15F4921FFAF4E00357249 /* Check.LessThanOrEqualTo.swift in Sources */,
 				24A15F9221FFAF4E00357249 /* ValidatableModel.swift in Sources */,

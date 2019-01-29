@@ -22,7 +22,7 @@ class RecordsListController: BaseViewController
     {
         let controller = mdc_controller(storyboardName: nil)!
 
-//        controller.title = R.string.localizationTitle.recordsList()
+        controller.title = "Список записей"
 
         return controller
     }
@@ -54,8 +54,6 @@ class RecordsListController: BaseViewController
         // Create bindings for table view
         bindTableViewDataSource()
         bindTableViewDelegate()
-
-        
 
         // Init the refresh control
         self.refreshControl.addTarget(self, action: Actions.updateData, for: .valueChanged)

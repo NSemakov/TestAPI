@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------------
 //
-//  ValidatableModelConverter.swift
+//  SessionModel.swift
 //
 //  @author     Denis Kolyasev <KolyasevDA@ekassir.com>
 //  @copyright  Copyright (c) 2016, eKassir Ltd. All rights reserved.
@@ -8,21 +8,26 @@
 //
 // ----------------------------------------------------------------------------
 
-
-open class ValidatableModelConverter<T: ValidatableModel>: AbstractValidatableModelConverter<T>
+public final class SessionModel: ValidatableModel
 {
-// MARK: - Construction
+// MARK: - Properties
 
-    public override init() {
-        super.init()
-    }
+    public private(set) var session: String!
 
 // MARK: - Methods
 
-    open override func supportedMediaTypes() -> [MediaType] {
-        return [
-            MediaType.All
-        ]
+    public override func map(with map: Map) {
+        super.map(with: map)
+
+        // (De)serialize to/from json
+        self.session <~ map[JsonKeys.SessionData]
+    }
+
+    public override func validate() throws {
+        try super.validate()
+
+        // Validate instance
+        // ...
     }
 }
 
