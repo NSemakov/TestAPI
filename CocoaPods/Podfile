@@ -1,0 +1,25 @@
+platform :ios, '8.0'
+use_frameworks!
+
+workspace '../TestAPI/TestAPI.xcworkspace'
+
+abstract_target 'TestAPI.iOS' do
+  project '../TestAPI/Sources/TestAPI.UI.Application.xcodeproj'
+
+  # Dependencies
+
+#  pod_with 'PureLayout', '~> 3.1.2'
+#  pod_with 'R.swift', '~> 5.0.0'
+
+#  pod_with 'SDWebImage', '~> 4.4.2'
+
+  pod 'RxSwift',    '~> 4.0'
+  pod 'RxDataSources', '~> 3.0'
+  pod 'RxCocoa',    '~> 4.0'
+  pod 'Alamofire',  '~> 4.8'
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'MBProgressHUD', '~> 1.1.0'
+  
+  # Targets
+  target 'TestAPI'
+end
