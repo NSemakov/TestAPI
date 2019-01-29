@@ -7,6 +7,7 @@
 //
 // ----------------------------------------------------------------------------
 
+import Alamofire
 import RxCocoa
 import RxDataSources
 import RxSwift
@@ -47,9 +48,8 @@ class RecordsListController: BaseViewController
         self.tableView.rowHeight = UITableView.automaticDimension
 
         // Setup "Edit" button for navigation bar
-//        self.editAdressesButton =  UIBarButtonItem(title: R.string.localizationButton.edit(), style: .plain, target: self, action: Actions.touchEditAddresses)
-//
-//        self.navigationItem.rightBarButtonItem = self.editAdressesButton
+        self.addRecordButton =  UIBarButtonItem(barButtonSystemItem: .add, target: self, action: Actions.addRecord)
+        self.navigationItem.rightBarButtonItem = self.addRecordButton
 
         // Create bindings for table view
         bindTableViewDataSource()
@@ -58,6 +58,22 @@ class RecordsListController: BaseViewController
         // Init the refresh control
         self.refreshControl.addTarget(self, action: Actions.updateData, for: .valueChanged)
         self.tableView.insertSubview(self.refreshControl, at: 0)
+        
+        // Handle lack of internet connection
+        let reachabilityManager = NetworkReachabilityManager()
+        
+        weak var weakSelf = self
+        
+        reachabilityManager?.startListening()
+        reachabilityManager?.listener = { _ in
+            if let isNetworkReachable = reachabilityManager?.isReachable,
+                isNetworkReachable == true {
+                // Do nothing
+            } else {
+                //Internet Not Available"
+                weakSelf?.showCustomAlert()
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -73,23 +89,37 @@ class RecordsListController: BaseViewController
         TaskQueue.cancel(self.customTag)
     }
 
-    override func setEditing(_ editing: Bool, animated: Bool) {
-        super.setEditing(editing, animated: animated)
-
-        self.tableView.setEditing(editing, animated: animated)
-
-//        let rightBarButtonItem = editing ? self.saveAdressesButton : (self.showEditButton ? self.editAdressesButton : nil)
-//        self.navigationItem.setRightBarButton(rightBarButtonItem, animated: animated)
-    }
-
 // MARK: - Actions
 
     @IBAction
-    func touchEditAddresses(_ sender: AnyObject) {
-        setEditing(true, animated: true)
+    func touchAddRecord(_ sender: AnyObject) {
+        let vc = NewRecordController.controller(title: "Новая запись")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
 // MARK: - Private Methods
+    
+    private func showCustomAlert()
+    {
+        weak var weakSelf = self
+        
+        let alertCtrl = UIAlertController(title: "Ошибка", message: "Проверьте соединение с сетью", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
+        
+        let repeatAction = UIAlertAction(
+            title: "Повторить",
+            style: .default,
+            handler: { action in
+                weakSelf?.updateData()
+        })
+        
+        alertCtrl.addAction(repeatAction)
+        
+        alertCtrl.addAction(cancelAction)
+        
+        AlertManager.showCustomAlert(alertCtrl, animated: true)
+    }
 
     private func bindTableViewDataSource()
     {
@@ -113,13 +143,6 @@ class RecordsListController: BaseViewController
         viewModels
             .drive(self.tableView.rx.items(dataSource: self.dataSource))
             .disposed(by: self.disposeBag)
-
-        viewModels
-            .drive(onNext: { [weak self] viewModels in
-                let isEmpty = (viewModels.first?.items ?? []).isEmpty
-                self?.setShowEditButton(!(isEmpty), animated: true)
-            })
-            .disposed(by: self.disposeBag)
     }
 
     private func bindTableViewDelegate()
@@ -128,10 +151,10 @@ class RecordsListController: BaseViewController
 
         // Handle row selection
         self.tableView.rx.modelSelected(RecordModel.self)
-            .subscribe(onNext: { ride in
+            .subscribe(onNext: { record in
                 guard let instance = weakSelf else { return }
 
-                instance.showDetailRideHistory(ride)
+                instance.showDetailRecord(record)
             })
             .disposed(by: self.disposeBag)
 
@@ -143,8 +166,7 @@ class RecordsListController: BaseViewController
     {
         return self.data
             .asObservable()
-            .map { [weak self] items in
-                guard let instance = self else { return [] }
+            .map { items in
                 return [TableSection(model: (), items: items)]
             }
             .observeOn(MainScheduler.instance)
@@ -155,25 +177,10 @@ class RecordsListController: BaseViewController
             .asDriver(onErrorJustReturn: [])
     }
 
-    private func showDetailRideHistory(_ ride: RecordModel)
+    private func showDetailRecord(_ record: RecordModel)
     {
-//        let vc =
-//        self.navigationController?.pushViewController(vc, animated: true)
-    }
-
-    private func setShowEditButton(_ showEditButton: Bool, animated: Bool)
-    {
-        self.showEditButton = showEditButton
-
-        if showEditButton
-        {
-            if !(self.isEditing) {
-                self.navigationItem.rightBarButtonItem = self.editAdressesButton
-            }
-        }
-        else {
-            setEditing(false, animated: animated)
-        }
+        let vc = DetailedRecordController.controller(record: record.body)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     @objc private func updateData()
@@ -210,12 +217,19 @@ class RecordsListController: BaseViewController
             onFailure: { call, error, callback in
                 callback(call, error)
                 
-
+                self.refreshControl.endRefreshing()
+        })
+        
+        callback.thenUI(
+            initInterface: { call, callback in
+                callback(call)
+        },
+            finalize: { call, entity, callback in
+                self.refreshControl.endRefreshing()
         })
         
         let task = GetRecordsTaskBuilder()
             .tag(self.customTag)
-            //.httpClientConfig(ApplicationHttpClientConfig.SharedConfig)
             .requestEntity(entity)
             .build()
         
@@ -236,23 +250,19 @@ class RecordsListController: BaseViewController
 
     private struct Actions
     {
-//        static let touchEditAddresses = #selector(RecordsListController.updateData)
         static let updateData = #selector(RecordsListController.updateData)
+        static let addRecord = #selector(RecordsListController.touchAddRecord(_:))
     }
 
 // MARK: - Variables
 
-    private var editAdressesButton: UIBarButtonItem!
+    private var addRecordButton: UIBarButtonItem!
     
-    private var showEditButton: Bool = true
-
     private let dataSource = RxTableViewSectionedReloadDataSource<TableSection>(configureCell: { dataSource, tableView, indexPath, element in
         return UITableViewCell()
     })
 
     private let refreshControl = UIRefreshControl()
-
-    private var canUpdateDataInPast: Bool = true
     
     private var data = Variable<[RecordModel]>([])
 
@@ -267,10 +277,6 @@ extension RecordsListController: UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
-//    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-//        return .delete
-//    }
 
 }
 

@@ -18,18 +18,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="91.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JUS-qM-FUn" userLabel="Creation Date Container View">
-                        <rect key="frame" x="10" y="5" width="175" height="46"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUS-qM-FUn" userLabel="Creation Date Container View">
+                        <rect key="frame" x="10" y="5" width="175" height="60.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Дата создания:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mb0-Lg-9qA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата создания:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mb0-Lg-9qA">
                                 <rect key="frame" x="0.0" y="0.0" width="175" height="18"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="25.09.1999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXY-kp-AyJ">
-                                <rect key="frame" x="0.0" y="23" width="175" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="25.09.1999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXY-kp-AyJ">
+                                <rect key="frame" x="0.0" y="23" width="175" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.66663098335266113" green="0.66669148206710815" blue="0.66658049821853638" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -54,7 +54,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25.09.1999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oa-rh-MZN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="25.09.1999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oa-rh-MZN">
                                 <rect key="frame" x="0.0" y="23" width="175" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.66663098340000004" green="0.66669148209999995" blue="0.66658049819999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -72,9 +72,9 @@
                             <constraint firstItem="e4T-M2-qrz" firstAttribute="top" secondItem="m74-ep-Kfn" secondAttribute="top" id="y4A-ef-an7"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYn-iC-kdp">
-                        <rect key="frame" x="10" y="59" width="355" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYn-iC-kdp">
+                        <rect key="frame" x="10" y="70.5" width="355" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -96,8 +96,6 @@
                 <outlet property="changingDateContainerView" destination="m74-ep-Kfn" id="4wB-if-g0S"/>
                 <outlet property="changingDateLabel" destination="5oa-rh-MZN" id="yvr-yp-etm"/>
                 <outlet property="creationDateLabel" destination="gXY-kp-AyJ" id="jtq-g3-Gxo"/>
-                <outlet property="dateTimeLabel" destination="Mb0-Lg-9qA" id="gIF-wC-Ekc"/>
-                <outlet property="priceLabel" destination="gXY-kp-AyJ" id="uSX-Tq-dxu"/>
                 <outlet property="recordTextLabel" destination="hYn-iC-kdp" id="CqJ-3o-aD3"/>
             </connections>
             <point key="canvasLocation" x="-501.60000000000002" y="-448.87556221889059"/>

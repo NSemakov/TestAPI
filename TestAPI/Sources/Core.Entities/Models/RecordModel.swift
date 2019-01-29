@@ -28,8 +28,8 @@ public final class RecordModel: ValidatableModel
         // (De)serialize to/from json
         self.id   <~  map[JsonKeys.Id]
         self.body <~  map[JsonKeys.Body]
-        self.da   <~  map[JsonKeys.Da]
-        self.dm   <~  map[JsonKeys.Dm]
+        self.da   <~  (map[JsonKeys.Da], StringToDoubleTransform.shared)
+        self.dm   <~  (map[JsonKeys.Dm], StringToDoubleTransform.shared)
     }
 
     public override func validate() throws {

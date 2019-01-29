@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UyW-b7-NEC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Record Controller-->
+        <scene sceneID="QEr-Vn-yTC">
+            <objects>
+                <viewController storyboardIdentifier="MessageController" id="UyW-b7-NEC" customClass="NewRecordController" customModule="TestAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XCN-kx-JzB"/>
+                        <viewControllerLayoutGuide type="bottom" id="snW-xg-tDc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uop-Lp-kyC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypi-rn-MUn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wIg-B8-f5h" customClass="KMPlaceholderTextView" customModule="TestAPI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Ваш комментарий"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyE-kj-7BF">
+                                        <rect key="frame" x="0.0" y="607" width="187.5" height="60"/>
+                                        <color key="backgroundColor" red="0.22756037217998071" green="0.44869396146959561" blue="1" alpha="0.92449383802816898" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" placeholder="YES" id="MKZ-mo-Btf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Сохранить"/>
+                                        <connections>
+                                            <action selector="touchSaveMessage:" destination="UyW-b7-NEC" eventType="touchUpInside" id="siE-Av-dHH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jU-V4-yHG">
+                                        <rect key="frame" x="187.5" y="607" width="187.5" height="60"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" placeholder="YES" id="8h2-g6-Xjy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Отменить"/>
+                                        <connections>
+                                            <action selector="touchCancel:" destination="UyW-b7-NEC" eventType="touchUpInside" id="Krx-xn-0H3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="2jU-V4-yHG" firstAttribute="width" secondItem="RyE-kj-7BF" secondAttribute="width" id="EQb-4c-Yuc"/>
+                                    <constraint firstAttribute="bottom" secondItem="RyE-kj-7BF" secondAttribute="bottom" id="Hdl-PK-wqw"/>
+                                    <constraint firstAttribute="trailing" secondItem="wIg-B8-f5h" secondAttribute="trailing" id="PFm-IK-fsC"/>
+                                    <constraint firstItem="RyE-kj-7BF" firstAttribute="top" secondItem="wIg-B8-f5h" secondAttribute="bottom" id="TPj-fH-e4j"/>
+                                    <constraint firstItem="wIg-B8-f5h" firstAttribute="top" secondItem="ypi-rn-MUn" secondAttribute="top" id="WX9-3l-1Dj"/>
+                                    <constraint firstItem="wIg-B8-f5h" firstAttribute="leading" secondItem="ypi-rn-MUn" secondAttribute="leading" id="cHS-Z9-lF2"/>
+                                    <constraint firstAttribute="bottom" secondItem="2jU-V4-yHG" secondAttribute="bottom" id="d3M-RD-Hgh"/>
+                                    <constraint firstItem="2jU-V4-yHG" firstAttribute="leading" secondItem="RyE-kj-7BF" secondAttribute="trailing" id="h9r-Sb-agh"/>
+                                    <constraint firstItem="RyE-kj-7BF" firstAttribute="leading" secondItem="ypi-rn-MUn" secondAttribute="leading" id="oJE-Oo-ZR7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ypi-rn-MUn" secondAttribute="trailing" id="16e-R0-zZR"/>
+                            <constraint firstItem="ypi-rn-MUn" firstAttribute="leading" secondItem="uop-Lp-kyC" secondAttribute="leading" id="KjW-9c-ymj"/>
+                            <constraint firstAttribute="trailing" secondItem="2jU-V4-yHG" secondAttribute="trailing" id="OAk-3H-PIG"/>
+                            <constraint firstAttribute="bottom" secondItem="ypi-rn-MUn" secondAttribute="bottom" id="Yp3-Pd-9XT"/>
+                            <constraint firstItem="ypi-rn-MUn" firstAttribute="top" secondItem="uop-Lp-kyC" secondAttribute="top" id="zVs-qV-vCD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="ypi-rn-MUn" id="C8g-eI-IXe"/>
+                        <outlet property="contentViewBottomConstraint" destination="Yp3-Pd-9XT" id="sKg-uk-nFU"/>
+                        <outlet property="messageTextView" destination="wIg-B8-f5h" id="Jka-1g-fCm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x2s-YG-fIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="114.69265367316342"/>
+        </scene>
+    </scenes>
+</document>

@@ -41,6 +41,12 @@ class RecordCell: UITableViewCell
         else {
             self.changingDateContainerView.isHidden = true
         }
+        
+        var textResult: String?
+        if let text = viewModel.body {
+            textResult = text.substring(upto: text.count > 200 ? 200 : text.count)
+        }
+        self.recordTextLabel.text = textResult
     }
 
 // MARK: - Private Methods
