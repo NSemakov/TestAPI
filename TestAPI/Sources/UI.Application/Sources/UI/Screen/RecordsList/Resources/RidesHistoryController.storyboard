@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OYB-Rv-g2b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OYB-Rv-g2b">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -19,32 +18,32 @@
         <scene sceneID="n1j-Bq-HcY">
             <objects>
                 <viewController storyboardIdentifier="RecordsListController" id="OYB-Rv-g2b" customClass="RecordsListController" customModule="TestAPI" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7r1-Sh-3s7">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vgA-Ua-cqy"/>
+                        <viewControllerLayoutGuide type="bottom" id="2qz-HI-cCO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7r1-Sh-3s7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ajQ-wn-Kac">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ajQ-wn-Kac">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aS-f7-NZk">
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aS-f7-NZk">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihN-pq-ij3" userLabel="Image Container View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="292.5"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zg-gb-OFw" userLabel="Container View">
-                                        <rect key="frame" x="0.0" y="292.5" width="375" height="82"/>
+                                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zg-gb-OFw" userLabel="Container View">
+                                        <rect key="frame" x="0.0" y="290" width="375" height="87"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Записей нет" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4H-rd-BRq">
-                                                <rect key="frame" x="19" y="0.0" width="337.5" height="29"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Записей нет" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4H-rd-BRq">
+                                                <rect key="frame" x="19" y="0.0" width="337.5" height="34"/>
                                                 <fontDescription key="fontDescription" name="CirceRoundedAlt-Regular2" family="Circe Rounded Alt " pointSize="29"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавьте новую нажав кнопку справа наверху" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vC9-7i-ySv">
-                                                <rect key="frame" x="19" y="54" width="337.5" height="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Добавьте новую нажав кнопку справа наверху" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vC9-7i-ySv">
+                                                <rect key="frame" x="19" y="59" width="337.5" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -66,11 +65,7 @@
                                 <constraints>
                                     <constraint firstItem="4zg-gb-OFw" firstAttribute="centerY" secondItem="3aS-f7-NZk" secondAttribute="centerY" id="IBV-da-PLF"/>
                                     <constraint firstAttribute="trailing" secondItem="4zg-gb-OFw" secondAttribute="trailing" id="J7T-S7-19D"/>
-                                    <constraint firstAttribute="trailing" secondItem="ihN-pq-ij3" secondAttribute="trailing" id="Rnd-Y8-WOB"/>
                                     <constraint firstItem="4zg-gb-OFw" firstAttribute="leading" secondItem="3aS-f7-NZk" secondAttribute="leading" id="Uo7-MS-lCV"/>
-                                    <constraint firstItem="4zg-gb-OFw" firstAttribute="top" secondItem="ihN-pq-ij3" secondAttribute="bottom" id="cUX-fH-mfT"/>
-                                    <constraint firstItem="ihN-pq-ij3" firstAttribute="top" secondItem="3aS-f7-NZk" secondAttribute="top" id="df5-zy-Ndd"/>
-                                    <constraint firstItem="ihN-pq-ij3" firstAttribute="leading" secondItem="3aS-f7-NZk" secondAttribute="leading" id="ph4-kz-kyT"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -79,13 +74,12 @@
                             <constraint firstAttribute="bottom" secondItem="3aS-f7-NZk" secondAttribute="bottom" id="0vX-HR-3Qr"/>
                             <constraint firstItem="3aS-f7-NZk" firstAttribute="top" secondItem="7r1-Sh-3s7" secondAttribute="top" id="74P-mI-k7z"/>
                             <constraint firstItem="ajQ-wn-Kac" firstAttribute="top" secondItem="7r1-Sh-3s7" secondAttribute="top" id="J2U-66-FkZ"/>
-                            <constraint firstItem="LHw-zL-hKN" firstAttribute="trailing" secondItem="3aS-f7-NZk" secondAttribute="trailing" id="UoY-ZU-kol"/>
-                            <constraint firstItem="ajQ-wn-Kac" firstAttribute="leading" secondItem="LHw-zL-hKN" secondAttribute="leading" id="aED-Oy-9xu"/>
+                            <constraint firstAttribute="trailing" secondItem="3aS-f7-NZk" secondAttribute="trailing" id="UoY-ZU-kol"/>
+                            <constraint firstItem="ajQ-wn-Kac" firstAttribute="leading" secondItem="7r1-Sh-3s7" secondAttribute="leading" id="aED-Oy-9xu"/>
                             <constraint firstAttribute="bottom" secondItem="ajQ-wn-Kac" secondAttribute="bottom" id="bY4-UL-jc3"/>
-                            <constraint firstItem="LHw-zL-hKN" firstAttribute="trailing" secondItem="ajQ-wn-Kac" secondAttribute="trailing" id="hsk-LS-JXC"/>
-                            <constraint firstItem="3aS-f7-NZk" firstAttribute="leading" secondItem="LHw-zL-hKN" secondAttribute="leading" id="v0N-ME-39n"/>
+                            <constraint firstAttribute="trailing" secondItem="ajQ-wn-Kac" secondAttribute="trailing" id="hsk-LS-JXC"/>
+                            <constraint firstItem="3aS-f7-NZk" firstAttribute="leading" secondItem="7r1-Sh-3s7" secondAttribute="leading" id="v0N-ME-39n"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="LHw-zL-hKN"/>
                     </view>
                     <connections>
                         <outlet property="noHistoryView" destination="3aS-f7-NZk" id="FgV-KJ-IeE"/>

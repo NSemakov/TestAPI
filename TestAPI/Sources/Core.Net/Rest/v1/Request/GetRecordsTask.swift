@@ -12,7 +12,7 @@ import Foundation
 
 // ----------------------------------------------------------------------------
 
-open class GetRecordsTask: VendorAbstractTask<JsonBody, [RecordModel]>
+open class GetRecordsTask: AbstractTask<FormBody, [RecordModel]>
 {
 // MARK: - Construction
 
@@ -60,7 +60,7 @@ open class GetRecordsTask: VendorAbstractTask<JsonBody, [RecordModel]>
 
 // ----------------------------------------------------------------------------
 
-open class GetRecordsTaskBuilder: VendorAbstractTaskBuilder<VoidBody, Void>
+open class GetRecordsTaskBuilder: AbstractTaskBuilder<FormBody, [RecordModel]>
 {
 // MARK: - Construction
 
@@ -78,12 +78,6 @@ open class GetRecordsTaskBuilder: VendorAbstractTaskBuilder<VoidBody, Void>
     }
 
 // MARK: - Methods
-
-    override open func checkInvalidState() {
-        super.checkInvalidState()
-
-        Guard.notNil(self.options.orderId)
-    }
 
     override open func newTask() -> GetRecordsTask {
         return GetRecordsTask(builder: self)

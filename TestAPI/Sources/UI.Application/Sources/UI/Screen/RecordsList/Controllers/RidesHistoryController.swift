@@ -35,10 +35,6 @@ class RecordsListController: BaseViewController
 
     @IBOutlet private weak var ridesWillAppearLabel: UILabel!
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return ConfigurationManager.shared.ui.preferredStatusBarStyle
-    }
-
 // MARK: - Methods
 
     override func viewDidLoad() {
@@ -49,34 +45,34 @@ class RecordsListController: BaseViewController
 
         self.tableView.estimatedRowHeight = Inner.EstimatedRowHeight
         self.tableView.rowHeight = UITableView.automaticDimension
-        self.tableView.tableFooterView = self.tableFooterView
-
-        self.tableView.sizeFooterToFit()
 
         // Setup "Edit" button for navigation bar
-        self.editAdressesButton =  UIBarButtonItem(title: R.string.localizationButton.edit(), style: .plain, target: self, action: Actions.touchEditAddresses)
-
-        // Setup "Save" button for navigation bar
-        self.saveAdressesButton = UIBarButtonItem(title: R.string.localizationButton.done(), style: .plain, target: self, action: Actions.touchSaveAddresses)
-
-        self.navigationItem.rightBarButtonItem = self.editAdressesButton
+//        self.editAdressesButton =  UIBarButtonItem(title: R.string.localizationButton.edit(), style: .plain, target: self, action: Actions.touchEditAddresses)
+//
+//        self.navigationItem.rightBarButtonItem = self.editAdressesButton
 
         // Create bindings for table view
         bindTableViewDataSource()
         bindTableViewDelegate()
 
-        // Update data
-        updateData(for: .future)
+        
 
         // Init the refresh control
-        self.refreshControl.addTarget(self, action: Actions.requestNextPage, for: .valueChanged)
+        self.refreshControl.addTarget(self, action: Actions.updateData, for: .valueChanged)
         self.tableView.insertSubview(self.refreshControl, at: 0)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Update data
+        updateData()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
 
-//        AuthorizedTaskQueue.shared.cancel(self.customTag)
+        TaskQueue.cancel(self.customTag)
     }
 
     override func setEditing(_ editing: Bool, animated: Bool) {
@@ -84,8 +80,8 @@ class RecordsListController: BaseViewController
 
         self.tableView.setEditing(editing, animated: animated)
 
-        let rightBarButtonItem = editing ? self.saveAdressesButton : (self.showEditButton ? self.editAdressesButton : nil)
-        self.navigationItem.setRightBarButton(rightBarButtonItem, animated: animated)
+//        let rightBarButtonItem = editing ? self.saveAdressesButton : (self.showEditButton ? self.editAdressesButton : nil)
+//        self.navigationItem.setRightBarButton(rightBarButtonItem, animated: animated)
     }
 
 // MARK: - Actions
@@ -101,7 +97,7 @@ class RecordsListController: BaseViewController
     {
         self.dataSource.configureCell = { dataSource, tableView, indexPath, element in
             let cell = tableView.dequeueReusableCellOfClass(RecordCell.self, forIndexPath: indexPath)
-            cell.updateView(RecordCellViewModel(ride: element))
+            cell.updateView(RecordCellViewModel())
 
             return cell
         }
@@ -133,22 +129,11 @@ class RecordsListController: BaseViewController
         weak var weakSelf = self
 
         // Handle row selection
-        self.tableView.rx.modelSelected(RideModel.self)
+        self.tableView.rx.modelSelected(RecordModel.self)
             .subscribe(onNext: { ride in
                 guard let instance = weakSelf else { return }
 
                 instance.showDetailRideHistory(ride)
-            })
-            .disposed(by: self.disposeBag)
-
-        // Handle row deletion
-        self.tableView.rx.itemDeleted
-            .subscribe(onNext: { indexPath in
-                guard let instance = weakSelf else { return }
-
-                if let ride: RideModel = try? instance.tableView.rx.model(at: indexPath) {
-                    instance.deleteRide(ride)
-                }
             })
             .disposed(by: self.disposeBag)
 
@@ -159,7 +144,7 @@ class RecordsListController: BaseViewController
     private func createViewModelsDriver() -> Driver<[TableSection]>
     {
         return self.data
-            .asObservable
+            .asObservable()
             .map { [weak self] items in
                 guard let instance = self else { return [] }
                 return [TableSection(model: (), items: items)]
@@ -172,10 +157,10 @@ class RecordsListController: BaseViewController
             .asDriver(onErrorJustReturn: [])
     }
 
-    private func showDetailRideHistory(_ ride: RideModel)
+    private func showDetailRideHistory(_ ride: RecordModel)
     {
-        let vc = RideHistoryDetailController.controller(ride, userContext: self.userContext)
-        self.navigationController?.pushViewController(vc, animated: true)
+//        let vc =
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     private func setShowEditButton(_ showEditButton: Bool, animated: Bool)
@@ -193,12 +178,17 @@ class RecordsListController: BaseViewController
         }
     }
 
-    private func updateData()
+    @objc private func updateData()
     {
+        guard let session = AuthManager.defaultManager.session else {
+            AlertManager.showErrorAlert("Нет сессии")
+            return
+        }
+        
         weak var weakSelf = self
                
         let body = FormBodyBuilder()
-            .add(JsonKeys.Session, value: AuthManager.defaultManager.session)
+            .add(JsonKeys.Session, value: session)
             .build()
         
         let entity = BasicRequestEntityBuilder<FormBody>()
@@ -215,7 +205,7 @@ class RecordsListController: BaseViewController
                 // Handle response
                 if let records = entity.body
                 {
-                    weakSelf.data.value = records
+                    weakSelf?.data.value = records
                 }
         },
             onFailure: { call, error, callback in
@@ -247,8 +237,8 @@ class RecordsListController: BaseViewController
 
     private struct Actions
     {
-        static let touchEditAddresses = #selector(RecordsListController.touchEditAddresses(_:))
-        static let requestNextPage = #selector(RecordsListController.requestNextPage)
+//        static let touchEditAddresses = #selector(RecordsListController.updateData)
+        static let updateData = #selector(RecordsListController.updateData)
     }
 
 // MARK: - Variables
@@ -265,7 +255,7 @@ class RecordsListController: BaseViewController
 
     private var canUpdateDataInPast: Bool = true
     
-    private var data = Variable<[RecordModel]>()
+    private var data = Variable<[RecordModel]>([])
 
 }
 

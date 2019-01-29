@@ -21,7 +21,6 @@ open class ValidatableModelConverter<T: ValidatableModel>: AbstractValidatableMo
 
     open override func supportedMediaTypes() -> [MediaType] {
         return [
-            MediaType.ApplicationVndBlackbirdTaxiBookingJson,
             MediaType.ApplicationJson
         ]
     }

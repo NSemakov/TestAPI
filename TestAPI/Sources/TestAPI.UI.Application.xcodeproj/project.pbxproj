@@ -384,7 +384,6 @@
 		24A1616221FFBBC800357249 /* RidesHistoryController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A1614D21FFBBC800357249 /* RidesHistoryController.storyboard */; };
 		24A1616621FFBBC800357249 /* RecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A1615121FFBBC800357249 /* RecordCell.xib */; };
 		24A1616721FFBBC800357249 /* RidesHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1615321FFBBC800357249 /* RidesHistoryController.swift */; };
-		24A1616821FFBBC800357249 /* RidePointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1615521FFBBC800357249 /* RidePointsView.swift */; };
 		24A1616921FFBBC800357249 /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1615621FFBBC800357249 /* RecordCell.swift */; };
 		24A1617321FFBCD700357249 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1617221FFBCD700357249 /* BaseViewController.swift */; };
 		24A1617621FFC23F00357249 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1617521FFC23F00357249 /* RecordModel.swift */; };
@@ -397,6 +396,20 @@
 		24A1618D21FFCB2E00357249 /* EndpointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1618C21FFCB2E00357249 /* EndpointManager.swift */; };
 		24A1619021FFCBCD00357249 /* DefaultHttpHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1618F21FFCBCD00357249 /* DefaultHttpHeaders.swift */; };
 		24A1619221FFCC5F00357249 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1619121FFCC5F00357249 /* AuthManager.swift */; };
+		24A1619E21FFD0F200357249 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1619521FFD0F200357249 /* UIView.swift */; };
+		24A161A121FFD0F200357249 /* UITableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1619821FFD0F200357249 /* UITableViewHeaderFooterView.swift */; };
+		24A161A221FFD0F200357249 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1619921FFD0F200357249 /* UITableView.swift */; };
+		24A161A321FFD0F200357249 /* UIView+AutoLayoutHide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1619A21FFD0F200357249 /* UIView+AutoLayoutHide.swift */; };
+		24A161A421FFD0F200357249 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1619B21FFD0F200357249 /* UITableViewCell.swift */; };
+		24A161A621FFD0F200357249 /* UIViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1619D21FFD0F200357249 /* UIViewController2.swift */; };
+		24A161AB21FFD26F00357249 /* BasicRestApiCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A161A821FFD26F00357249 /* BasicRestApiCallback.swift */; };
+		24A161AC21FFD26F00357249 /* QuietBasicRestApiCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A161A921FFD26F00357249 /* QuietBasicRestApiCallback.swift */; };
+		24A161AD21FFD26F00357249 /* SimpleRestApiCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A161AA21FFD26F00357249 /* SimpleRestApiCallback.swift */; };
+		24A161B421FFD2D600357249 /* AlertViewManager+RestApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A161AF21FFD2D600357249 /* AlertViewManager+RestApiError.swift */; };
+		24A161B621FFD2D600357249 /* UIAlertControllerHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A161B121FFD2D600357249 /* UIAlertControllerHolder.swift */; };
+		24A161B721FFD2D600357249 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A161B221FFD2D600357249 /* AlertManager.swift */; };
+		24A161B821FFD2D600357249 /* ProgressHUDActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A161B321FFD2D600357249 /* ProgressHUDActionHandler.swift */; };
+		24A161BA21FFD55800357249 /* DispatchHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A161B921FFD55800357249 /* DispatchHelpers.swift */; };
 		7523B3F8AA743DBBF5EEAD87 /* Pods_TestAPI_iOS_TestAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D05CB7F133C90AB04113519 /* Pods_TestAPI_iOS_TestAPI.framework */; };
 /* End PBXBuildFile section */
 
@@ -811,7 +824,6 @@
 		24A1614D21FFBBC800357249 /* RidesHistoryController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RidesHistoryController.storyboard; sourceTree = "<group>"; };
 		24A1615121FFBBC800357249 /* RecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordCell.xib; sourceTree = "<group>"; };
 		24A1615321FFBBC800357249 /* RidesHistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RidesHistoryController.swift; sourceTree = "<group>"; };
-		24A1615521FFBBC800357249 /* RidePointsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RidePointsView.swift; sourceTree = "<group>"; };
 		24A1615621FFBBC800357249 /* RecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
 		24A1617221FFBCD700357249 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		24A1617521FFC23F00357249 /* RecordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
@@ -824,6 +836,20 @@
 		24A1618C21FFCB2E00357249 /* EndpointManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointManager.swift; sourceTree = "<group>"; };
 		24A1618F21FFCBCD00357249 /* DefaultHttpHeaders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultHttpHeaders.swift; sourceTree = "<group>"; };
 		24A1619121FFCC5F00357249 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		24A1619521FFD0F200357249 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		24A1619821FFD0F200357249 /* UITableViewHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewHeaderFooterView.swift; sourceTree = "<group>"; };
+		24A1619921FFD0F200357249 /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		24A1619A21FFD0F200357249 /* UIView+AutoLayoutHide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayoutHide.swift"; sourceTree = "<group>"; };
+		24A1619B21FFD0F200357249 /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		24A1619D21FFD0F200357249 /* UIViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController2.swift; sourceTree = "<group>"; };
+		24A161A821FFD26F00357249 /* BasicRestApiCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicRestApiCallback.swift; sourceTree = "<group>"; };
+		24A161A921FFD26F00357249 /* QuietBasicRestApiCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuietBasicRestApiCallback.swift; sourceTree = "<group>"; };
+		24A161AA21FFD26F00357249 /* SimpleRestApiCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleRestApiCallback.swift; sourceTree = "<group>"; };
+		24A161AF21FFD2D600357249 /* AlertViewManager+RestApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlertViewManager+RestApiError.swift"; sourceTree = "<group>"; };
+		24A161B121FFD2D600357249 /* UIAlertControllerHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerHolder.swift; sourceTree = "<group>"; };
+		24A161B221FFD2D600357249 /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		24A161B321FFD2D600357249 /* ProgressHUDActionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUDActionHandler.swift; sourceTree = "<group>"; };
+		24A161B921FFD55800357249 /* DispatchHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchHelpers.swift; sourceTree = "<group>"; };
 		32F842803DAE1B68C6DD7377 /* Pods-TestAPI.iOS-TestAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAPI.iOS-TestAPI.release.xcconfig"; path = "../../CocoaPods/Pods/Target Support Files/Pods-TestAPI.iOS-TestAPI/Pods-TestAPI.iOS-TestAPI.release.xcconfig"; sourceTree = "<group>"; };
 		4D05CB7F133C90AB04113519 /* Pods_TestAPI_iOS_TestAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestAPI_iOS_TestAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1119FD9AD57A3A6A5C45334 /* Pods-TestAPI.iOS-TestAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAPI.iOS-TestAPI.debug.xcconfig"; path = "../../CocoaPods/Pods/Target Support Files/Pods-TestAPI.iOS-TestAPI/Pods-TestAPI.iOS-TestAPI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -893,6 +919,7 @@
 		24A15D8621FF868900357249 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				24A1619321FFD0F200357249 /* Extensions */,
 				24A15D8721FF868900357249 /* UI */,
 				24A15D8D21FF868900357249 /* Application */,
 			);
@@ -1009,6 +1036,7 @@
 				24A15DB321FFAF4E00357249 /* RoxieMobile.SwiftCommons */,
 				24A15DA821FFAE6700357249 /* RoxieMobile.ModernDesign */,
 				24A1611721FFB8EE00357249 /* Dispatch.swift */,
+				24A161B921FFD55800357249 /* DispatchHelpers.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -2294,7 +2322,6 @@
 		24A1615421FFBBC800357249 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				24A1615521FFBBC800357249 /* RidePointsView.swift */,
 				24A1615621FFBBC800357249 /* RecordCell.swift */,
 			);
 			path = Views;
@@ -2378,6 +2405,7 @@
 		24A1618B21FFCB2E00357249 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				24A161AE21FFD2D600357249 /* AlertView */,
 				24A1618C21FFCB2E00357249 /* EndpointManager.swift */,
 				24A1619121FFCC5F00357249 /* AuthManager.swift */,
 			);
@@ -2387,11 +2415,54 @@
 		24A1618E21FFCBCD00357249 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				24A161A721FFD26F00357249 /* Callback */,
 				24A1618F21FFCBCD00357249 /* DefaultHttpHeaders.swift */,
 			);
 			name = Network;
 			path = UI.Application/Sources/Network;
 			sourceTree = SOURCE_ROOT;
+		};
+		24A1619321FFD0F200357249 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				24A1619421FFD0F200357249 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		24A1619421FFD0F200357249 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				24A1619521FFD0F200357249 /* UIView.swift */,
+				24A1619821FFD0F200357249 /* UITableViewHeaderFooterView.swift */,
+				24A1619921FFD0F200357249 /* UITableView.swift */,
+				24A1619A21FFD0F200357249 /* UIView+AutoLayoutHide.swift */,
+				24A1619B21FFD0F200357249 /* UITableViewCell.swift */,
+				24A1619D21FFD0F200357249 /* UIViewController2.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		24A161A721FFD26F00357249 /* Callback */ = {
+			isa = PBXGroup;
+			children = (
+				24A161A821FFD26F00357249 /* BasicRestApiCallback.swift */,
+				24A161A921FFD26F00357249 /* QuietBasicRestApiCallback.swift */,
+				24A161AA21FFD26F00357249 /* SimpleRestApiCallback.swift */,
+			);
+			path = Callback;
+			sourceTree = "<group>";
+		};
+		24A161AE21FFD2D600357249 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				24A161AF21FFD2D600357249 /* AlertViewManager+RestApiError.swift */,
+				24A161B121FFD2D600357249 /* UIAlertControllerHolder.swift */,
+				24A161B221FFD2D600357249 /* AlertManager.swift */,
+				24A161B321FFD2D600357249 /* ProgressHUDActionHandler.swift */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
 		};
 		988F406E225569AFA24DA72E /* Frameworks */ = {
 			isa = PBXGroup;
@@ -2513,6 +2584,7 @@
 				"${SRCROOT}/../../CocoaPods/Pods/Target Support Files/Pods-TestAPI.iOS-TestAPI/Pods-TestAPI.iOS-TestAPI-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
@@ -2525,6 +2597,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
@@ -2567,7 +2640,6 @@
 				24A1601121FFB1FD00357249 /* CMAC.swift in Sources */,
 				24A160FA21FFB63700357249 /* HttpBody.swift in Sources */,
 				24A15F9621FFAF4E00357249 /* UrlValidator.swift in Sources */,
-				24A1616821FFBBC800357249 /* RidePointsView.swift in Sources */,
 				24A15F0421FFAF4E00357249 /* String.Empty.swift in Sources */,
 				24A15F5321FFAF4E00357249 /* Check.NilOrValid.swift in Sources */,
 				24A15F6621FFAF4E00357249 /* LFEncoding.m in Sources */,
@@ -2644,6 +2716,7 @@
 				24A15EED21FFAF4E00357249 /* FileManager.CopyItem.swift in Sources */,
 				24A15F6B21FFAF4E00357249 /* LFMemory.m in Sources */,
 				24A1602A21FFB1FD00357249 /* SHA3.swift in Sources */,
+				24A161AB21FFD26F00357249 /* BasicRestApiCallback.swift in Sources */,
 				24A15F8321FFAF4E00357249 /* ISO8601DateTransform.swift in Sources */,
 				24A15F2021FFAF4E00357249 /* Guard.Blank.swift in Sources */,
 				24A1618A21FFC75E00357249 /* RestApiRoute.swift in Sources */,
@@ -2680,6 +2753,7 @@
 				24A15F1421FFAF4E00357249 /* PerformOnce.swift in Sources */,
 				24A1602621FFB1FD00357249 /* SecureBytes.swift in Sources */,
 				24A15F5521FFAF4E00357249 /* Check.Empty.swift in Sources */,
+				24A161A621FFD0F200357249 /* UIViewController2.swift in Sources */,
 				24A160E721FFB63700357249 /* DefaultHttpClientConfig.swift in Sources */,
 				24A1610021FFB63700357249 /* AbstractTask.swift in Sources */,
 				24A15EF021FFAF4E00357249 /* Roxie.Timer.swift in Sources */,
@@ -2763,6 +2837,8 @@
 				24A1610721FFB63700357249 /* Task.swift in Sources */,
 				24A15FA421FFAF4E00357249 /* LogcatLogger.Debug.swift in Sources */,
 				24A15F9D21FFAF4E00357249 /* Logger.Warning.swift in Sources */,
+				24A161B721FFD2D600357249 /* AlertManager.swift in Sources */,
+				24A161AD21FFD26F00357249 /* SimpleRestApiCallback.swift in Sources */,
 				24A15F9121FFAF4E00357249 /* SerializableObject.swift in Sources */,
 				24A1618721FFC6EA00357249 /* ValidatableModelConverter.swift in Sources */,
 				24A1603021FFB1FD00357249 /* BlockCipher.swift in Sources */,
@@ -2799,6 +2875,7 @@
 				24A15EE921FFAF4E00357249 /* Bundle.ExecutableName.swift in Sources */,
 				24A15F1621FFAF4E00357249 /* Synchronized.swift in Sources */,
 				24A15F8C21FFAF4E00357249 /* TransformType.swift in Sources */,
+				24A161A221FFD0F200357249 /* UITableView.swift in Sources */,
 				24A160DC21FFB63700357249 /* HttpAuthentication.swift in Sources */,
 				24A15F4A21FFAF4E00357249 /* Check.ThrowsAny.swift in Sources */,
 				24A15F7121FFAF4E00357249 /* SSZipArchive.m in Sources */,
@@ -2826,9 +2903,11 @@
 				24A1610621FFB63700357249 /* DataBody.swift in Sources */,
 				24A15FA121FFAF4E00357249 /* LogcatLogger.swift in Sources */,
 				24A15FB221FFAF4E00357249 /* ChainedLogger.Information.swift in Sources */,
+				24A161AC21FFD26F00357249 /* QuietBasicRestApiCallback.swift in Sources */,
 				24A15F8621FFAF4E00357249 /* URLTransform.swift in Sources */,
 				24A1602D21FFB1FD00357249 /* Rabbit.swift in Sources */,
 				24A1601E21FFB1FD00357249 /* Array+Foundation.swift in Sources */,
+				24A161B821FFD2D600357249 /* ProgressHUDActionHandler.swift in Sources */,
 				24A160E221FFB63700357249 /* MultiValueDictionary.swift in Sources */,
 				24A15F7521FFAF4E00357249 /* EnumOperators.swift in Sources */,
 				24A15F9E21FFAF4E00357249 /* Logger.Verbose.swift in Sources */,
@@ -2886,6 +2965,7 @@
 				24A15F3021FFAF4E00357249 /* Guard.AllValid.swift in Sources */,
 				24A15F5921FFAF4E00357249 /* Check.IsFalse.swift in Sources */,
 				24A15F2121FFAF4E00357249 /* Guard.swift in Sources */,
+				24A161BA21FFD55800357249 /* DispatchHelpers.swift in Sources */,
 				24A160FE21FFB63700357249 /* Cancellable.swift in Sources */,
 				24A15F1221FFAF4E00357249 /* UnfairLock.swift in Sources */,
 				24A160E421FFB63700357249 /* HttpHeadersUtils.swift in Sources */,
@@ -2895,6 +2975,7 @@
 				24A15F8E21FFAF4E00357249 /* CommonKeys.swift in Sources */,
 				24A15EF221FFAF4E00357249 /* Roxie.CachesDirectory.swift in Sources */,
 				24A1610521FFB63700357249 /* BasicRequestEntity.swift in Sources */,
+				24A161A321FFD0F200357249 /* UIView+AutoLayoutHide.swift in Sources */,
 				24A1603721FFB1FD00357249 /* Generics.swift in Sources */,
 				24A15EFE21FFAF4E00357249 /* Swift.swift in Sources */,
 				24A15FA321FFAF4E00357249 /* LogcatLogger.Warning.swift in Sources */,
@@ -2902,6 +2983,7 @@
 				24A15EEC21FFAF4E00357249 /* FileManager.RemoveItem.swift in Sources */,
 				24A15F3621FFAF4E00357249 /* Guard.AllNilOrValid.swift in Sources */,
 				24A1601B21FFB1FD00357249 /* HMAC+Foundation.swift in Sources */,
+				24A161B421FFD2D600357249 /* AlertViewManager+RestApiError.swift in Sources */,
 				24A160DB21FFB63700357249 /* HttpBasicAuthentication.swift in Sources */,
 				24A1611121FFB63700357249 /* Interceptor.swift in Sources */,
 				24A15F8221FFAF4E00357249 /* CustomDateFormatTransform.swift in Sources */,
@@ -2909,7 +2991,9 @@
 				24A160D721FFB63700357249 /* HttpCookieStore.swift in Sources */,
 				24A15F5621FFAF4E00357249 /* Check.IsNil.swift in Sources */,
 				24A15EE821FFAF4E00357249 /* Date.Components.swift in Sources */,
+				24A161A421FFD0F200357249 /* UITableViewCell.swift in Sources */,
 				24A160CE21FFB63700357249 /* CharsetProvider.swift in Sources */,
+				24A161A121FFD0F200357249 /* UITableViewHeaderFooterView.swift in Sources */,
 				24A160C521FFB63700357249 /* VoidConverter.swift in Sources */,
 				24A15FA921FFAF4E00357249 /* StdoutLogger.Warning.swift in Sources */,
 				24A1617621FFC23F00357249 /* RecordModel.swift in Sources */,
@@ -2920,10 +3004,12 @@
 				24A1618D21FFCB2E00357249 /* EndpointManager.swift in Sources */,
 				24A1603221FFB1FD00357249 /* Blowfish.swift in Sources */,
 				24A160F821FFB63700357249 /* HttpResult.swift in Sources */,
+				24A161B621FFD2D600357249 /* UIAlertControllerHolder.swift in Sources */,
 				24A15EF421FFAF4E00357249 /* Roxie.TemporaryDirectory.swift in Sources */,
 				24A15F6521FFAF4E00357249 /* StreamTypedCoder.m in Sources */,
 				24A1600E21FFB1FD00357249 /* AES.Cryptors.swift in Sources */,
 				24A160DF21FFB63700357249 /* DefaultUserAgent.m in Sources */,
+				24A1619E21FFD0F200357249 /* UIView.swift in Sources */,
 				24A15F4421FFAF4E00357249 /* Check.AllNilOrValid.swift in Sources */,
 				24A15EEF21FFAF4E00357249 /* Data.Empty.swift in Sources */,
 				24A15FA521FFAF4E00357249 /* LogcatLogger.Error.swift in Sources */,

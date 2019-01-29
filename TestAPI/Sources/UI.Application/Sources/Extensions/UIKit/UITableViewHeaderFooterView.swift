@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------------
 //
-//  ValidatableModelCollectionConverter.swift
+//  UITableViewHeaderFooterView.swift
 //
 //  @author     Denis Kolyasev <KolyasevDA@ekassir.com>
 //  @copyright  Copyright (c) 2016, eKassir Ltd. All rights reserved.
@@ -8,25 +8,18 @@
 //
 // ----------------------------------------------------------------------------
 
-
+import UIKit
 
 // ----------------------------------------------------------------------------
 
-open class ValidatableModelArrayConverter<T: ValidatableModel>: AbstractValidatableModelArrayConverter<T>
+extension UITableViewHeaderFooterView
 {
-// MARK: - Construction
+// MARK: Properties
 
-    public override init() {
-        super.init()
+    class var defaultReusableIdentifier: String {
+        return self.defaultResourceName
     }
 
-// MARK: - Methods
-
-    open override func supportedMediaTypes() -> [MediaType] {
-        return [
-            MediaType.ApplicationJson
-        ]
-    }
 }
 
 // ----------------------------------------------------------------------------
