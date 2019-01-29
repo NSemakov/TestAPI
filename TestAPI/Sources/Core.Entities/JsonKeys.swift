@@ -12,9 +12,11 @@ public struct JsonKeys
 {
 // MARK: - Common
 
-    public static let Id = "id"
-    public static let Da = "da"
-    public static let Dm = "dm"
-    public static let Body = "body"
+    public static let Id = "data.id"
+    public static let Da = "data.da"
+    public static let Dm = "data.dm"
+    public static let Body = "data.body"
+    
+    public static let Session = "session"
 }
 // ----------------------------------------------------------------------------

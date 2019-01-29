@@ -29,7 +29,7 @@ open class GetRecordsTask: VendorAbstractTask<JsonBody, [RecordModel]>
 
     override open func callExecute() -> HttpResult
     {
-        let route = RestApiRoute.paymentCancellation(getRequestEntity().url!, orderId: self.options.orderId)
+        let route = RestApiRoute.base(getRequestEntity().url!)
         return newClient().post(newRequestEntity(route))
     }
 
@@ -45,7 +45,7 @@ open class GetRecordsTask: VendorAbstractTask<JsonBody, [RecordModel]>
 
     fileprivate struct Options
     {
-        var orderId: String!
+        // ...
     }
 
 // MARK: - Constants
@@ -87,11 +87,6 @@ open class GetRecordsTaskBuilder: VendorAbstractTaskBuilder<VoidBody, Void>
 
     override open func newTask() -> GetRecordsTask {
         return GetRecordsTask(builder: self)
-    }
-
-    open func orderId(_ orderId: String) -> Self {
-        self.options.orderId = orderId
-        return self
     }
 
 // MARK: - Variables

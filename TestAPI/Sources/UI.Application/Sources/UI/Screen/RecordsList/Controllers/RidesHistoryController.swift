@@ -158,8 +158,8 @@ class RecordsListController: BaseViewController
 
     private func createViewModelsDriver() -> Driver<[TableSection]>
     {
-        return self.userContext.rideHistoryManager
-            .rx_rides()
+        return self.data
+            .asObservable
             .map { [weak self] items in
                 guard let instance = self else { return [] }
                 return [TableSection(model: (), items: items)]
@@ -195,71 +195,47 @@ class RecordsListController: BaseViewController
 
     private func updateData()
     {
+        weak var weakSelf = self
+               
+        let body = FormBodyBuilder()
+            .add(JsonKeys.Session, value: AuthManager.defaultManager.session)
+            .build()
         
-    }
-
-    @objc private func requestNextPage() {
-        updateData(for: .future)
-    }
-
-    private func updateData(for direction: DirectionType = .invalidOptionValue)
-    {
-        switch direction
-        {
-            case .future:
-                self.userContext.rideHistoryManager.paginatedCollectionLoader.flush()
-
-            default:
-                break
-        }
-
-        self.userContext.rideHistoryManager.paginatedCollectionLoader.requestNextPage(for: direction)
-    }
-
-    private func setLoading(isLoading: LoadForDirection)
-    {
-        let loading = isLoading.loading
-        let direction = isLoading.direction
-
-        switch direction
-        {
-            case .future:
-                if loading {
-                    // Do nothing.. All is done automatically
+        let entity = BasicRequestEntityBuilder<FormBody>()
+            .url(EndpointManager.defaultManager.baseURL)
+            .headers(DefaultHttpHeaders.headers(AuthManager.defaultManager.token))
+            .body(body)
+            .build()
+        
+        let callback = BasicRestApiCallback<FormBody, [RecordModel]>()
+        callback.then(
+            onSuccess: { call, entity, callback in
+                callback(call, entity)
+                
+                // Handle response
+                if let records = entity.body
+                {
+                    weakSelf.data.value = records
                 }
-                else {
-                    self.refreshControl.endRefreshing()
-                }
+        },
+            onFailure: { call, error, callback in
+                callback(call, error)
+                
 
-            case .past:
-                if loading {
-                    self.tableFooterView.hiddenWithDependentConstraints = false
-                    self.tableFooterView.startAnimating()
-                    self.tableView.sizeFooterToFit()
-                }
-                else {
-                    // Let give animation a second to be appeared on screen.
-                    Dispatch.after(Inner.MinDelayForAnimationComplete, queue: Queue.main)
-                    {
-                        self.tableFooterView.hiddenWithDependentConstraints = true
-                        self.tableFooterView.stopAnimating()
-                        self.refreshControl.endRefreshing()
-                        self.tableView.sizeFooterToFit()
-                    }
-                }
-
-            default:
-                if !loading {
-                    // Force turn off refreshControl because it's start automatically even if we don't need. Can't prevent from this.
-                    self.refreshControl.endRefreshing()
-                }
-                break
-        }
+        })
+        
+        let task = GetRecordsTaskBuilder()
+            .tag(self.customTag)
+            //.httpClientConfig(ApplicationHttpClientConfig.SharedConfig)
+            .requestEntity(entity)
+            .build()
+        
+        TaskQueue.enqueue(task, callback: callback, callbackOnUiThread: true)
     }
 
 // MARK: - Inner Types
 
-    typealias TableSection = SectionModel<Void, RideModel>
+    typealias TableSection = SectionModel<Void, RecordModel>
 
 // MARK: - Constants
 
@@ -288,6 +264,8 @@ class RecordsListController: BaseViewController
     private let refreshControl = UIRefreshControl()
 
     private var canUpdateDataInPast: Bool = true
+    
+    private var data = Variable<[RecordModel]>()
 
 }
 

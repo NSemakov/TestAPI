@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------------
 //
-//  ValidatableModelCollectionConverter.swift
+//  EndpointManager.swift
 //
 //  @author     Denis Kolyasev <KolyasevDA@ekassir.com>
 //  @copyright  Copyright (c) 2016, eKassir Ltd. All rights reserved.
@@ -8,26 +8,47 @@
 //
 // ----------------------------------------------------------------------------
 
+import Foundation
 
 
 // ----------------------------------------------------------------------------
+// TODO: Refactoring is needed
+// ----------------------------------------------------------------------------
 
-open class ValidatableModelArrayConverter<T: ValidatableModel>: AbstractValidatableModelArrayConverter<T>
+class EndpointManager
 {
 // MARK: - Construction
 
-    public override init() {
-        super.init()
+    static let defaultManager = EndpointManager()
+
+    private init() { }
+
+// MARK: - Properties
+
+    var baseURL: URL? {
+        return URL(string: "https://bnet.i-partner.ru/testAPI/")
     }
 
 // MARK: - Methods
 
-    open override func supportedMediaTypes() -> [MediaType] {
-        return [
-            MediaType.ApplicationVndBlackbirdTaxiBookingJson,
-            MediaType.ApplicationJson
-        ]
-    }
+    // ...
+
+// MARK: - Actions
+
+    // ...
+
+// MARK: - Private Methods
+
+    // ...
+
+// MARK: - Constants
+
+    // ...
+
+// MARK: - Variables
+
+    // ...
+
 }
 
 // ----------------------------------------------------------------------------

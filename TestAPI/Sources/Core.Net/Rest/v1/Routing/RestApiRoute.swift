@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------------
 //
-//  ValidatableModelConverter.swift
+//  RestApiRoute.swift
 //
 //  @author     Denis Kolyasev <KolyasevDA@ekassir.com>
 //  @copyright  Copyright (c) 2016, eKassir Ltd. All rights reserved.
@@ -8,23 +8,19 @@
 //
 // ----------------------------------------------------------------------------
 
+import Foundation
 
-open class ValidatableModelConverter<T: ValidatableModel>: AbstractValidatableModelConverter<T>
+// ----------------------------------------------------------------------------
+
+public final class RestApiRoute: NonCreatable
 {
-// MARK: - Construction
-
-    public override init() {
-        super.init()
-    }
-
 // MARK: - Methods
 
-    open override func supportedMediaTypes() -> [MediaType] {
-        return [
-            MediaType.ApplicationVndBlackbirdTaxiBookingJson,
-            MediaType.ApplicationJson
-        ]
+    // GET
+    public static func base(_ baseURL: URL) -> HttpRoute {
+        return HttpRoute.buildRoute(baseURL)
     }
-}
 
+
+}
 // ----------------------------------------------------------------------------

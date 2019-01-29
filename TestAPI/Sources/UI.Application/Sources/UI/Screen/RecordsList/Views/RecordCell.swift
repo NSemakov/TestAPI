@@ -26,7 +26,7 @@ class RecordCell: UITableViewCell
     
     @IBOutlet private weak var changingDateLabel: UILabel!
     
-    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var recordTextLabel: UILabel!
     
 // MARK: - Methods
 
@@ -37,8 +37,7 @@ class RecordCell: UITableViewCell
 
 // MARK: - Variables
 
-    private let ridePointsView = RidePointsView.loadFromNib()
-
+    // ...
 }
 
 // ----------------------------------------------------------------------------

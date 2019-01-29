@@ -98,7 +98,7 @@
                 <outlet property="creationDateLabel" destination="gXY-kp-AyJ" id="jtq-g3-Gxo"/>
                 <outlet property="dateTimeLabel" destination="Mb0-Lg-9qA" id="gIF-wC-Ekc"/>
                 <outlet property="priceLabel" destination="gXY-kp-AyJ" id="uSX-Tq-dxu"/>
-                <outlet property="textLabel" destination="hYn-iC-kdp" id="dJ2-wF-MAy"/>
+                <outlet property="recordTextLabel" destination="hYn-iC-kdp" id="CqJ-3o-aD3"/>
             </connections>
             <point key="canvasLocation" x="-501.60000000000002" y="-448.87556221889059"/>
         </tableViewCell>

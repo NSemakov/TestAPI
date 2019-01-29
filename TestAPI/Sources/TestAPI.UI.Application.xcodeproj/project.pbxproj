@@ -386,9 +386,6 @@
 		24A1616721FFBBC800357249 /* RidesHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1615321FFBBC800357249 /* RidesHistoryController.swift */; };
 		24A1616821FFBBC800357249 /* RidePointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1615521FFBBC800357249 /* RidePointsView.swift */; };
 		24A1616921FFBBC800357249 /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1615621FFBBC800357249 /* RecordCell.swift */; };
-		24A1616D21FFBBC800357249 /* PaymentMethodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1615C21FFBBC800357249 /* PaymentMethodViewModel.swift */; };
-		24A1616E21FFBBC800357249 /* RideHistoryDetailController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A1615E21FFBBC800357249 /* RideHistoryDetailController.storyboard */; };
-		24A1616F21FFBBC800357249 /* RideHistoryDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1616021FFBBC800357249 /* RideHistoryDetailController.swift */; };
 		24A1617321FFBCD700357249 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1617221FFBCD700357249 /* BaseViewController.swift */; };
 		24A1617621FFC23F00357249 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1617521FFC23F00357249 /* RecordModel.swift */; };
 		24A1617921FFC3A700357249 /* TimeZoneFreeTimestampTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1617821FFC3A700357249 /* TimeZoneFreeTimestampTransform.swift */; };
@@ -396,6 +393,10 @@
 		24A1618021FFC5D400357249 /* GetRecordsTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1617F21FFC5D400357249 /* GetRecordsTask.swift */; };
 		24A1618621FFC6EA00357249 /* ValidatableModelArrayConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1618321FFC6EA00357249 /* ValidatableModelArrayConverter.swift */; };
 		24A1618721FFC6EA00357249 /* ValidatableModelConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1618421FFC6EA00357249 /* ValidatableModelConverter.swift */; };
+		24A1618A21FFC75E00357249 /* RestApiRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1618921FFC75E00357249 /* RestApiRoute.swift */; };
+		24A1618D21FFCB2E00357249 /* EndpointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1618C21FFCB2E00357249 /* EndpointManager.swift */; };
+		24A1619021FFCBCD00357249 /* DefaultHttpHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1618F21FFCBCD00357249 /* DefaultHttpHeaders.swift */; };
+		24A1619221FFCC5F00357249 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1619121FFCC5F00357249 /* AuthManager.swift */; };
 		7523B3F8AA743DBBF5EEAD87 /* Pods_TestAPI_iOS_TestAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D05CB7F133C90AB04113519 /* Pods_TestAPI_iOS_TestAPI.framework */; };
 /* End PBXBuildFile section */
 
@@ -812,9 +813,6 @@
 		24A1615321FFBBC800357249 /* RidesHistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RidesHistoryController.swift; sourceTree = "<group>"; };
 		24A1615521FFBBC800357249 /* RidePointsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RidePointsView.swift; sourceTree = "<group>"; };
 		24A1615621FFBBC800357249 /* RecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
-		24A1615C21FFBBC800357249 /* PaymentMethodViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentMethodViewModel.swift; sourceTree = "<group>"; };
-		24A1615E21FFBBC800357249 /* RideHistoryDetailController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RideHistoryDetailController.storyboard; sourceTree = "<group>"; };
-		24A1616021FFBBC800357249 /* RideHistoryDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideHistoryDetailController.swift; sourceTree = "<group>"; };
 		24A1617221FFBCD700357249 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		24A1617521FFC23F00357249 /* RecordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
 		24A1617821FFC3A700357249 /* TimeZoneFreeTimestampTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeZoneFreeTimestampTransform.swift; sourceTree = "<group>"; };
@@ -822,6 +820,10 @@
 		24A1617F21FFC5D400357249 /* GetRecordsTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRecordsTask.swift; sourceTree = "<group>"; };
 		24A1618321FFC6EA00357249 /* ValidatableModelArrayConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatableModelArrayConverter.swift; sourceTree = "<group>"; };
 		24A1618421FFC6EA00357249 /* ValidatableModelConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatableModelConverter.swift; sourceTree = "<group>"; };
+		24A1618921FFC75E00357249 /* RestApiRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApiRoute.swift; sourceTree = "<group>"; };
+		24A1618C21FFCB2E00357249 /* EndpointManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointManager.swift; sourceTree = "<group>"; };
+		24A1618F21FFCBCD00357249 /* DefaultHttpHeaders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultHttpHeaders.swift; sourceTree = "<group>"; };
+		24A1619121FFCC5F00357249 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		32F842803DAE1B68C6DD7377 /* Pods-TestAPI.iOS-TestAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAPI.iOS-TestAPI.release.xcconfig"; path = "../../CocoaPods/Pods/Target Support Files/Pods-TestAPI.iOS-TestAPI/Pods-TestAPI.iOS-TestAPI.release.xcconfig"; sourceTree = "<group>"; };
 		4D05CB7F133C90AB04113519 /* Pods_TestAPI_iOS_TestAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestAPI_iOS_TestAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1119FD9AD57A3A6A5C45334 /* Pods-TestAPI.iOS-TestAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAPI.iOS-TestAPI.debug.xcconfig"; path = "../../CocoaPods/Pods/Target Support Files/Pods-TestAPI.iOS-TestAPI/Pods-TestAPI.iOS-TestAPI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -909,7 +911,6 @@
 		24A15D8821FF868900357249 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				24A1615A21FFBBC800357249 /* RideHistoryDetail */,
 				24A1614921FFBBC800357249 /* RecordsList */,
 				24A15D8921FF868900357249 /* LaunchScreen */,
 			);
@@ -939,6 +940,8 @@
 		24A15D8D21FF868900357249 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				24A1618E21FFCBCD00357249 /* Network */,
+				24A1618B21FFCB2E00357249 /* Manager */,
 				24A15D8E21FF868900357249 /* AppDelegate.swift */,
 			);
 			path = Application;
@@ -2297,40 +2300,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		24A1615A21FFBBC800357249 /* RideHistoryDetail */ = {
-			isa = PBXGroup;
-			children = (
-				24A1615B21FFBBC800357249 /* ViewModels */,
-				24A1615D21FFBBC800357249 /* Resources */,
-				24A1615F21FFBBC800357249 /* Controllers */,
-			);
-			path = RideHistoryDetail;
-			sourceTree = "<group>";
-		};
-		24A1615B21FFBBC800357249 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				24A1615C21FFBBC800357249 /* PaymentMethodViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		24A1615D21FFBBC800357249 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				24A1615E21FFBBC800357249 /* RideHistoryDetailController.storyboard */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		24A1615F21FFBBC800357249 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				24A1616021FFBBC800357249 /* RideHistoryDetailController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		24A1617021FFBCD700357249 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -2374,6 +2343,7 @@
 		24A1617D21FFC5D400357249 /* v1 */ = {
 			isa = PBXGroup;
 			children = (
+				24A1618821FFC75E00357249 /* Routing */,
 				24A1618121FFC6EA00357249 /* Converter */,
 				24A1617E21FFC5D400357249 /* Request */,
 			);
@@ -2396,6 +2366,32 @@
 			);
 			path = Converter;
 			sourceTree = "<group>";
+		};
+		24A1618821FFC75E00357249 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				24A1618921FFC75E00357249 /* RestApiRoute.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		24A1618B21FFCB2E00357249 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				24A1618C21FFCB2E00357249 /* EndpointManager.swift */,
+				24A1619121FFCC5F00357249 /* AuthManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		24A1618E21FFCBCD00357249 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				24A1618F21FFCBCD00357249 /* DefaultHttpHeaders.swift */,
+			);
+			name = Network;
+			path = UI.Application/Sources/Network;
+			sourceTree = SOURCE_ROOT;
 		};
 		988F406E225569AFA24DA72E /* Frameworks */ = {
 			isa = PBXGroup;
@@ -2476,7 +2472,6 @@
 			files = (
 				24A1616221FFBBC800357249 /* RidesHistoryController.storyboard in Resources */,
 				24A1616621FFBBC800357249 /* RecordCell.xib in Resources */,
-				24A1616E21FFBBC800357249 /* RideHistoryDetailController.storyboard in Resources */,
 				24A15D9321FF868900357249 /* LaunchScreen.storyboard in Resources */,
 				24A15D9121FF868900357249 /* Assets.xcassets in Resources */,
 			);
@@ -2517,8 +2512,10 @@
 			inputPaths = (
 				"${SRCROOT}/../../CocoaPods/Pods/Target Support Files/Pods-TestAPI.iOS-TestAPI/Pods-TestAPI.iOS-TestAPI-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -2527,8 +2524,10 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -2647,6 +2646,7 @@
 				24A1602A21FFB1FD00357249 /* SHA3.swift in Sources */,
 				24A15F8321FFAF4E00357249 /* ISO8601DateTransform.swift in Sources */,
 				24A15F2021FFAF4E00357249 /* Guard.Blank.swift in Sources */,
+				24A1618A21FFC75E00357249 /* RestApiRoute.swift in Sources */,
 				24A15EE321FFAF4E00357249 /* SwiftCommonsExtensions.m in Sources */,
 				24A15F3E21FFAF4E00357249 /* Check.AllNotEmpty.swift in Sources */,
 				24A160D321FFB63700357249 /* HTTPCookieStorage.swift in Sources */,
@@ -2661,7 +2661,6 @@
 				24A15F4221FFAF4E00357249 /* Check.AllNotNil.swift in Sources */,
 				24A1603921FFB1FD00357249 /* SHA2.swift in Sources */,
 				24A15F4621FFAF4E00357249 /* Check.Throws.swift in Sources */,
-				24A1616F21FFBBC800357249 /* RideHistoryDetailController.swift in Sources */,
 				24A15F8421FFAF4E00357249 /* DateTransform.swift in Sources */,
 				24A15EF621FFAF4E00357249 /* Validatable.Valid.swift in Sources */,
 				24A15F8021FFAF4E00357249 /* ToJSON.swift in Sources */,
@@ -2696,6 +2695,7 @@
 				24A15F0F21FFAF4E00357249 /* ReflectedType.swift in Sources */,
 				24A1604A21FFB1FD00357249 /* OFB.swift in Sources */,
 				24A15F0321FFAF4E00357249 /* String.Trim.swift in Sources */,
+				24A1619221FFCC5F00357249 /* AuthManager.swift in Sources */,
 				24A1602021FFB1FD00357249 /* Rabbit+Foundation.swift in Sources */,
 				24A160F421FFB63700357249 /* UnexpectedMediaTypeError.swift in Sources */,
 				24A1616721FFBBC800357249 /* RidesHistoryController.swift in Sources */,
@@ -2737,6 +2737,7 @@
 				24A1601021FFB1FD00357249 /* HMAC.swift in Sources */,
 				24A15F8121FFAF4E00357249 /* HexColorTransform.swift in Sources */,
 				24A160D121FFB63700357249 /* MimeTypeUtils.swift in Sources */,
+				24A1619021FFCBCD00357249 /* DefaultHttpHeaders.swift in Sources */,
 				24A15EF721FFAF4E00357249 /* SwiftCommonsLang.m in Sources */,
 				24A1604221FFB1FD00357249 /* CBC.swift in Sources */,
 				24A15F1321FFAF4E00357249 /* PthreadLock.swift in Sources */,
@@ -2893,7 +2894,6 @@
 				24A15F7A21FFAF4E00357249 /* Mapper.swift in Sources */,
 				24A15F8E21FFAF4E00357249 /* CommonKeys.swift in Sources */,
 				24A15EF221FFAF4E00357249 /* Roxie.CachesDirectory.swift in Sources */,
-				24A1616D21FFBBC800357249 /* PaymentMethodViewModel.swift in Sources */,
 				24A1610521FFB63700357249 /* BasicRequestEntity.swift in Sources */,
 				24A1603721FFB1FD00357249 /* Generics.swift in Sources */,
 				24A15EFE21FFAF4E00357249 /* Swift.swift in Sources */,
@@ -2917,6 +2917,7 @@
 				24A1602221FFB1FD00357249 /* MD5.swift in Sources */,
 				24A160E121FFB63700357249 /* QueryParams.swift in Sources */,
 				24A15F7721FFAF4E00357249 /* IntegerOperators.swift in Sources */,
+				24A1618D21FFCB2E00357249 /* EndpointManager.swift in Sources */,
 				24A1603221FFB1FD00357249 /* Blowfish.swift in Sources */,
 				24A160F821FFB63700357249 /* HttpResult.swift in Sources */,
 				24A15EF421FFAF4E00357249 /* Roxie.TemporaryDirectory.swift in Sources */,

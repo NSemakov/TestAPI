@@ -31,7 +31,7 @@ open class AbstractValidatableModelArrayConverter<T: ValidatableModel>: Abstract
         if let body = entity.body, body.isNotEmpty {
             do {
                 // Try to parse response body as JSON array
-                if let jsonArray = try JSON(data: body, options: .allowFragments).object as? JsonArray {
+                if let jsonArray = (try JSON(data: body, options: .allowFragments).object as? JsonObject)?["data"] as? JsonArray {
 
                     newBody = try jsonArray.enumerated().map { (index, element) in
                         if let jsonObject = element as? JsonObject {
